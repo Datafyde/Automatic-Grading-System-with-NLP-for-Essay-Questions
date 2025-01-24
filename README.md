@@ -10,18 +10,18 @@ The goal of this project is to develop a [Streamlit-based](https://youtu.be/2siB
 3. Provide functionality for uploading multiple files for grading and exporting the grading results.
 
 ## 3. Features of the System
-### 1. File Upload Support:
+### 1. File Upload Support
   - Upload the assessment key (correct answers) in CSV format.
   - Upload student submissions (answers) in CSV format.
-### 2. Objective Question Grading:
+### 2. Objective Question Grading
   - Compare student answers to the key for exact matches.
-### 3. Essay Question Grading with NLP:
+### 3. Essay Question Grading with NLP
   - Use semantic similarity to assess essay-type answers.
   - Scale similarity scores to a predefined range (e.g., 0-10 points).
-### 4. Grading Results:
+### 4. Grading Results
   - Generate individual scores for each student.
   - Calculate overall scores and percentages.
-### 5. Downloadable Results:
+### 5. Downloadable Results
   - Export grading results as a CSV file.
 
 ## 4. Requirements
@@ -33,12 +33,12 @@ The goal of this project is to develop a [Streamlit-based](https://youtu.be/2siB
   - `spacy`
   
 ### 4.2. Software Dependencies
-- Install the spaCy English model:
+- Install the `spaCy` English model:
  ``` python -m spacy download en_core_web_sm```
 
 ## 5. Project Workflow
 ### 5.1. Input Files
-1. #### Assessment Key (CSV Format):
+1. #### Assessment Key (CSV Format)
     - Columns:
       - **Question:** Unique identifier for each question.
       - **Answer:** Correct answer for the question.
@@ -46,10 +46,10 @@ The goal of this project is to develop a [Streamlit-based](https://youtu.be/2siB
         
     - Example:
 
-| Question | Answer | Type |
-| --- | --- |
-| Q1 | A | objective |
-| Q2 | Climate change is caused by greenhouse gases. | essay|
+      | Question | Answer | Type |
+      | --- | --- | --- |
+      | Q1 | A | objective |
+      | Q2 | Climate change is caused by greenhouse gases. | essay |
 
 2. #### Student Submission (CSV Format):
     - Columns:
@@ -57,17 +57,17 @@ The goal of this project is to develop a [Streamlit-based](https://youtu.be/2siB
       - **Answer:** Student's response to the question.
     - Example:
 
-| Question | Answer |
-| --- | --- |
-| Q1 | A |
-| Q2 | Climate change results from carbon emissions. |
+      | Question | Answer |
+      | --- | --- |
+      | Q1 | A |
+      | Q2 | Climate change results from carbon emissions. |
 
 ### 5.2. Grading Logic
 
-1. **Objective Questions:**
+1. **Objective Questions**
   - Award full marks (1.0) for exact matches between the student's answer and the correct answer.
   - Award 0 marks for incorrect answers.
-2. **Essay-Type Questions:**
+2. **Essay-Type Questions**
   - Use `spaCy` to calculate the semantic similarity between the correct answer and the student’s answer.
   - Scale similarity scores to a 0-10 range.
   - Missing answers score 0.
@@ -81,9 +81,9 @@ The goal of this project is to develop a [Streamlit-based](https://youtu.be/2siB
       - **Percentage:** Overall percentage.
     - Example:
 
-| Student | Score | Max Score | Percentage |
-| --- | --- | --- | ---|
-| student1.csv | 15.8 | 30 | 52.67%|
+      | Student | Score | Max Score | Percentage |
+      | --- | --- | --- | ---|
+      | student1.csv | 15.8 | 30 | 52.67% |
 
 ## 6. Implementation
 ### 6.1. Application Workflow
@@ -118,13 +118,13 @@ The implementation is based on Streamlit. Here’s a brief summary of the code:
 2. Follow the steps in the application interface to upload files, grade submissions, and download results.
 
 ## 8. Suggested Improvements
-### **1. Advanced NLP Models:**
+### **1. Advanced NLP Models**
   - Use transformer models (e.g., BERT) for more accurate essay evaluation.
-### **2. Customized Grading Criteria:**
+### **2. Customized Grading Criteria**
   - Allow users to set weights for essay vs objective questions.
-### **3. Question-Level Reports:**
+### **3. Question-Level Reports**
   - Provide insights on which questions most students struggled with.
-### **4. User Interface Enhancements:**
+### **4. User Interface Enhancements**
   - Add a progress bar during grading.
 
 ## 9. Conclusion
