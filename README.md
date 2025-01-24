@@ -25,95 +25,82 @@ The goal of this project is to develop a [Streamlit-based](https://youtu.be/2siB
   - Export grading results as a CSV file.
 
 ## 4. Requirements
-#### 4.1. Technical Requirements
+### 4.1. Technical Requirements
 - Python 3.8 or higher
 - Required Libraries:
   - `streamlit`
   - `pandas`
   - `spacy`
   
-#### 4.2. Software Dependencies
+### 4.2. Software Dependencies
 - Install the spaCy English model:
  ``` python -m spacy download en_core_web_sm```
 
 ## 5. Project Workflow
-#### 5.1. Input Files
-1. ##### Assessment Key (CSV Format):
-  - Columns:
-    - **Question:** Unique identifier for each question.
-    - **Answer:** Correct answer for the question.
-    - **Type:** Type of question (objective or essay).
-  - Example:
-Question
-Answer
-Type
+### 5.1. Input Files
+1. #### Assessment Key (CSV Format):
+    - Columns:
+      - **Question:** Unique identifier for each question.
+      - **Answer:** Correct answer for the question.
+      - **Type:** Type of question (objective or essay).
+        
+    - Example:
 
-Q1
-A
-objective
+| Question | Answer | Type |
+| --- | --- |
+| Q1 | A | objective |
+| Q2 | Climate change is caused by greenhouse gases. | essay|
 
-Q2
-Climate change is caused by greenhouse gases.
-essay
+2. #### Student Submission (CSV Format):
+    - Columns:
+      - **Question:** Unique identifier for each question (must match the assessment key).
+      - **Answer:** Student's response to the question.
+    - Example:
 
-2. ##### Student Submission (CSV Format):
-  - Columns:
-    - **Question:** Unique identifier for each question (must match the assessment key).
-    - **Answer:** Student's response to the question.
-  - Example:
+| Question | Answer |
+| --- | --- |
+| Q1 | A |
+| Q2 | Climate change results from carbon emissions. |
 
-Question
-Answer
-Q1
-A
-
-Q2
-Climate change results from carbon emissions.
-
-#### 5.2. Grading Logic
+### 5.2. Grading Logic
 
 1. **Objective Questions:**
-  - Award full marks (1.0) for exact matches between the student answer and the correct answer.
+  - Award full marks (1.0) for exact matches between the student's answer and the correct answer.
   - Award 0 marks for incorrect answers.
 2. **Essay-Type Questions:**
-  - Use spaCy to calculate the semantic similarity between the correct answer and the student’s answer.
+  - Use `spaCy` to calculate the semantic similarity between the correct answer and the student’s answer.
   - Scale similarity scores to a 0-10 range.
   - Missing answers score 0.
 
-#### 5.3. Output
-- Grading Results:
-  - Columns:
-    - **Student:** Name of the student.
-    - **Score:** Total score obtained.
-    - **Max Score:** Total possible score.
-    - **Percentage:** Overall percentage.
-  - Example:
-Student
-Score
-Max Score
-Percentage
+### 5.3. Output
+  - Grading Results:
+    - Columns:
+      - **Student:** Name of the student.
+      - **Score:** Total score obtained.
+      - **Max Score:** Total possible score.
+      - **Percentage:** Overall percentage.
+    - Example:
 
-student1.csv
-15.8
-30
-52.67%
+| Student | Score | Max Score | Percentage |
+| --- | --- | --- | ---|
+| student1.csv | 15.8 | 30 | 52.67%|
 
 ## 6. Implementation
-#### 6.1. Application Workflow
-1. **Step 1: Upload Assessment Key**
+### 6.1. Application Workflow
+### 1. **Step 1: Upload Assessment Key**
   - Upload a CSV file containing correct answers and question types.
   - The application validates the file format and displays its contents.
-2. **Step 2: Upload Student Submissions**
+### 2. **Step 2: Upload Student Submissions**
   - Upload one or more CSV files containing students' answers.
   - The application validates each file and processes it for grading.
-3. **Step 3: Grading Logic**
+### 3. **Step 3: Grading Logic**
   - Objective questions are graded for exact matches.
   - Essay questions are graded using NLP-based semantic similarity.
-4. **Step 4: Export Grading Results**
+### 4. **Step 4: Export Grading Results**
   - Display results for each student.
   - Allow download of the results as a CSV file.
 
-#### 6.2. Python Code
+### 6.2. Python Code
 The implementation is based on Streamlit. Here’s a brief summary of the code:
 - Load and validate uploaded files.
 - Use `pandas` to merge assessment key and student submissions.
@@ -131,13 +118,13 @@ The implementation is based on Streamlit. Here’s a brief summary of the code:
 2. Follow the steps in the application interface to upload files, grade submissions, and download results.
 
 ## 8. Suggested Improvements
-**1. Advanced NLP Models:**
+### **1. Advanced NLP Models:**
   - Use transformer models (e.g., BERT) for more accurate essay evaluation.
-**2. Customized Grading Criteria:**
+### **2. Customized Grading Criteria:**
   - Allow users to set weights for essay vs objective questions.
-**3. Question-Level Reports:**
+### **3. Question-Level Reports:**
   - Provide insights on which questions most students struggled with.
-**4. User Interface Enhancements:**
+### **4. User Interface Enhancements:**
   - Add a progress bar during grading.
 
 ## 9. Conclusion
