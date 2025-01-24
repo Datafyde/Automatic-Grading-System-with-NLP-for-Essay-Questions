@@ -51,7 +51,7 @@ The goal of this project is to develop a [Streamlit-based](https://youtu.be/2siB
       | Q1 | A | objective |
       | Q2 | Climate change is caused by greenhouse gases. | essay |
 
-2. #### Student Submission (CSV Format):
+2. #### Student Submission (CSV Format)
     - Columns:
       - **Question:** Unique identifier for each question (must match the assessment key).
       - **Answer:** Student's response to the question.
