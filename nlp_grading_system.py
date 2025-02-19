@@ -9,6 +9,8 @@ Created on Wed Feb  5 17:15:57 2025
 import streamlit as st  # Streamlit is used to create the web app
 import pandas as pd  # Pandas is used to handle CSV file operations
 
+
+#FUNCTIONS
 # Function to validate the uploaded CSV file
 def validate_csv(file, expected_columns):
     try:
@@ -31,12 +33,72 @@ def validate_csv(file, expected_columns):
     except Exception as e:
         return None, f"Error reading the file: {str(e)}"  # Catch errors that occur while reading the file and return an error message
 
+
+
+
+# Function to Grade objective questions. By OKON
+def grade_objective_questions(key_df, response_df):
+    """
+    Grades objective questions using assessment key and student submission DataFrames
+
+    Parameters:
+    - key_df(DataFrame): Assessment Key CSV file
+    _ submission_df(DataFrame): Student Submission CSV file
+
+    Returns:
+    - DataFrame: Student Scores
+    """
+    try:
+        
+        # Remove Duplicates before merging to prevent incorrect mapping
+        key_df = key_df.drop_duplicates(subset=['QuestionID'])
+        response_df = response_df.drop_duplicates(subset=['StudentID', 'QuestionID'])
+
+        # Merge student responses with the assessment key
+        merged_df = response_df.merge(key_df, on="QuestionID", how="left")
+
+        # Assign scores (1.0 for correct, 0 for incorrect)
+        merged_df['Score'] = (merged_df['Student_Answer'] == merged_df['Correct_Answer']).astype(float)
+
+        # Summarize scores per student
+        student_scores = merged_df.groupby('StudentID', as_index=False)['Score'].sum()
+
+        return student_scores
+
+
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+
+        # Perform grading and display results.
+        # NOTE: Input this batch of code immediately after Adura's code ends or it will not run.
+        st.subheader("Grading Results")
+        scores_df = grade_objective_questions(key_df, response_df)
+
+        if scores_df is not None:
+            st.dataframe(scores_df)  # Display results in Streamlit
+        else:
+            st.error("Grading failed. Please check the input files and try again.")
+
+
+#st.info("Please upload both CSV files for validation.")
+
+
 # Create a sidebar header
 st.sidebar.header("Others")  # This section is for additional features, like refreshing the page, etc.
 
+
 # Button to refresh the page and wipe uploaded files
-if st.sidebar.button("Refresh Page & Wipe Files"):
-    st.rerun()  # When clicked, it should restart the app and clear the uploaded files.
+if "refresh" not in st.session_state:
+    st.session_state.refresh = False
+
+if st.sidebar.button("Refresh Page & Wipe Files", type="primary"):
+    st.session_state.clear()  # Clear all session state variables
+    st.rerun()
+    st.refresh()
+
+
+
 
 # Title of the web app
 st.title("Automatic Grading System")  # This is the main title of the app
@@ -70,3 +132,17 @@ if response_file:  # If a file has been uploaded
     else:
         st.success("Student's answers uploaded and validated successfully.")  # Show a success message in green
         st.dataframe(response_df.head())  # Display the first few rows of the validated file
+
+
+# Check if both files are validated successfully before showing the button
+if key_file and response_file and key_df is not None and response_df is not None:
+    # Add a button to trigger grading
+    if st.button("Show Results", type="primary"):
+        # Perform grading and display results
+        st.subheader("Results for Objective Questions")
+        scores_df = grade_objective_questions(key_df, response_df)
+
+        if scores_df is not None:
+            st.dataframe(scores_df)  # Display the grading results in a table
+        else:
+            st.error("Grading failed. Please check the input files and try again.")
