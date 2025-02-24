@@ -1,0 +1,13 @@
+questions
+assessment_key,,
+Question,Answer,Type
+Q1,A,MCQ
+Q2,D,MCQ
+Q3,B,MCQ
+Q4,C,MCQ
+Q5,"What is Data Science, and why is it important?",ESSAY
+Q6,What are the key steps in the Data Science process?,ESSAY
+Q7,What is the difference between supervised and unsupervised learning?,ESSAY
+Q8,"What is a dataset, and what are its common components?",ESSAY
+Q9,Why is data cleaning important in Data Science?,ESSAY
+Q10,What is the role of visualization in Data Science?,ESSAY
