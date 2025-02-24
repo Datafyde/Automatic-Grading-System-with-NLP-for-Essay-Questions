@@ -107,13 +107,13 @@ def grade_objective_questions(key_df, response_df):
 
 def Useless_multiline_function():
     '''
-    # 24.02.2025
+    # 24.02.2025 18:45 - 20:20
         Having reformatted and created the input files which includes question types,
         installing two NLP models to test from the next phase is to test the model against the input files.
 
         Futhermore, use conditions to examine PHASE 2 above where if question type == ESSAY it proceeds to PHASE 3
 
-
+    ########
     PHASE 3A: Essay Grading with NLP (NLP-Based Semantic Similarity Scoring) --- 
     
     Tasks:
