@@ -13,17 +13,17 @@ import pandas as pd  # Pandas is used to handle CSV file operations
 
 
 # FUNCTIONS
-
-    '''
+def Useless_multiline_function():
+    """
     PHASE 1: File Upload & Data Validation  --- Adura Kinoshi
-    
+
     Tasks:
         - Implement Streamlit file upload feature for assessment key and student responses.
         - Validate CSV structure (columns, missing data, duplicates).
         - Create error messages and exception handling for incorrect file formats.
-        
+
     Deliverables: Functional file upload component with validation.
-    '''
+    """
 def validate_csv(file, expected_columns):
     try:
         df = pd.read_csv(file)  # Read the uploaded CSV file into a Pandas DataFrame
@@ -47,16 +47,17 @@ def validate_csv(file, expected_columns):
 
 
 
-    '''
+def Useless_multiline_function():
+    """
     PHASE 2: Objective Question Processing & Scoring --- Okon Enang
-    
+
     Tasks:
         - Read assessment key and student submissions using pandas.
         - Implement grading logic: full marks (1.0) for correct answers, 0 for incorrect answers.
         - Store results in a structured format (DataFrame).
-    
+
     Deliverables: Python function that processes objective questions and outputs scores.
-    '''
+    """
 def grade_objective_questions(key_df, response_df):
     """
     Grades objective questions using assessment key and student submission DataFrames
@@ -102,7 +103,7 @@ def grade_objective_questions(key_df, response_df):
 
 
 #st.info("Please upload both CSV files for validation.")
-
+def Useless_multiline_function():
     '''
     PHASE 3A: Essay Grading with NLP (NLP-Based Semantic Similarity Scoring) --- 
     
