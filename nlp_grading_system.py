@@ -1,3 +1,5 @@
+# streamlit run "/Users/solomonayuba/Desktop/Internship II/Automatic-Grading-System-with-NLP-for-Essay-Questions/nlp_grading_system.py"
+
 # -*- coding: utf-8 -*-
 """
 Created on Wed Feb  5 17:15:57 2025
@@ -10,8 +12,18 @@ import streamlit as st  # Streamlit is used to create the web app
 import pandas as pd  # Pandas is used to handle CSV file operations
 
 
-#FUNCTIONS
-# Function to validate the uploaded CSV file
+# FUNCTIONS
+
+    '''
+    PHASE 1: File Upload & Data Validation  --- Adura Kinoshi
+    
+    Tasks:
+        - Implement Streamlit file upload feature for assessment key and student responses.
+        - Validate CSV structure (columns, missing data, duplicates).
+        - Create error messages and exception handling for incorrect file formats.
+        
+    Deliverables: Functional file upload component with validation.
+    '''
 def validate_csv(file, expected_columns):
     try:
         df = pd.read_csv(file)  # Read the uploaded CSV file into a Pandas DataFrame
@@ -35,8 +47,16 @@ def validate_csv(file, expected_columns):
 
 
 
-
-# Function to Grade objective questions. By OKON
+    '''
+    PHASE 2: Objective Question Processing & Scoring --- Okon Enang
+    
+    Tasks:
+        - Read assessment key and student submissions using pandas.
+        - Implement grading logic: full marks (1.0) for correct answers, 0 for incorrect answers.
+        - Store results in a structured format (DataFrame).
+    
+    Deliverables: Python function that processes objective questions and outputs scores.
+    '''
 def grade_objective_questions(key_df, response_df):
     """
     Grades objective questions using assessment key and student submission DataFrames
@@ -83,7 +103,44 @@ def grade_objective_questions(key_df, response_df):
 
 #st.info("Please upload both CSV files for validation.")
 
+    '''
+    PHASE 3A: Essay Grading with NLP (NLP-Based Semantic Similarity Scoring) --- 
+    
+    Tasks:
+        - Load the spaCy English model (en_core_web_sm or en_core_web_lg).
+        - Compute semantic similarity between student and correct answers.
+        - Scale scores to a 0-10 range.
+        - Handle missing answers (assign 0 points).
+    
+    Deliverables: Python function that computes NLP-based similarity scores for essays.
+    '''
 
+# Fill this part with code
+
+
+    '''
+    PHASE 3B: NLP Model Optimization & Alternative Approaches --- 
+    Tasks:
+        - Research alternative NLP models (BERT, SBERT, or OpenAI embeddings).
+        - Implement a test script comparing model accuracy and runtime.
+        - Recommend improvements for future iterations.
+    
+    Deliverables: Report comparing NLP models with insights for optimization.
+    '''
+
+# Fill this part with code
+
+
+    '''
+    PHASE 4: UI Development & Integration (Streamlit Dashboard Development) --- 
+    
+    Tasks:
+        - Design Streamlit UI for file uploads, grading, and results display.
+        - Implement progress indicators for the grading process.
+        - Display grading results in a structured table format.
+    
+    Deliverables: A working Streamlit UI with upload and grading visualization.
+    '''
 # Create a sidebar header
 st.sidebar.header("Others")  # This section is for additional features, like refreshing the page, etc.
 
@@ -96,9 +153,6 @@ if st.sidebar.button("Refresh Page & Wipe Files", type="primary"):
     st.session_state.clear()  # Clear all session state variables
     st.rerun()
     st.refresh()
-
-
-
 
 # Title of the web app
 st.title("Automatic Grading System")  # This is the main title of the app
