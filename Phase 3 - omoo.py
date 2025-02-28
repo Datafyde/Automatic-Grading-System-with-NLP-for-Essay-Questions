@@ -93,10 +93,10 @@ def grade_questions(key_df, response_df):
     st.error(f"Error during grading: {e}")
     return None
 
-if scores_df is not None:
-  st.dataframe(scores_df)  # Display the grading results in a table
-else:
-  st.error("Grading failed. Please check the input files and try again.")
+    if scores_df is not None:
+      st.dataframe(scores_df)  # Display the grading results in a table
+    else:
+      st.error("Grading failed. Please check the input files and try again.")
 
 
 # Streamlit UI
