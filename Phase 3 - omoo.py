@@ -94,12 +94,6 @@ def grade_questions(key_df, response_df):
     st.error(f"Error during grading: {e}")
     return None
 
-    if scores_df is not None:
-      st.dataframe(scores_df)  # Display the grading results in a table
-    else:
-      st.error("Grading failed. Please check the input files and try again.")
-
-  print(merged_df.columns)
 
 # Streamlit UI
 st.sidebar.header("Others")  # This section is for additional features, like refreshing the page, etc.
@@ -118,11 +112,11 @@ st.title("Automatic Grading System")  # This is the main title of the app
 
 # Section to upload the answer key file
 st.subheader("Upload the Assessment Key (CSV)")  # Subtitle for the answer key upload section
-key_file = st.file_uploader("*correct answers.csv*", type=["csv"], key="key_file")  # File uploader for the answer key
+key_file = st.file_uploader("*Assessment Answers.csv*", type=["csv"], key="key_file")  # File uploader for the answer key
 
 # Section to upload the student responses file
 st.subheader("Upload the Student's Submission (CSV)")  # Subtitle for the student response upload section
-response_file = st.file_uploader("*student submission.csv*", type=["csv"], key="response_file")  # File uploader for student responses
+response_file = st.file_uploader("*Students Submission.csv*", type=["csv"], key="response_file")  # File uploader for student responses
 
 # Define the expected column names for both uploaded files
 expected_key_columns = ["QuestionID", "Answer", "Type"]  # The correct answer file should have these columns
@@ -156,3 +150,7 @@ if key_file and response_file and key_df is not None and response_df is not None
     st.subheader("Grading Results")
     scores_df = grade_questions(key_df, response_df)
 
+    if scores_df is not None:
+      st.dataframe(scores_df)  # Display the grading results in a table
+    else:
+      st.error("Grading failed. Please check the input files and try again.")

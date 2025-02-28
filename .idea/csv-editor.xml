@@ -31,6 +31,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/correct_answers.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/student_responses.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/students_submission.csv">
           <value>
             <Attribute>
