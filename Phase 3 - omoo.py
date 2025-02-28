@@ -79,10 +79,10 @@ def grade_questions(key_df, response_df):
     for index, row in merged_df.iterrows():
       if row['Type'] == 'MCQ':
         # Grade MCQ questions using exact match
-        merged_df.at[index, 'Score'] = 1.0 if row['Students_Answer'] == row['Answer'] else 0.0
+        merged_df.at[index, 'Score'] = 1.0 if row['Answer'] == row['Answer'] else 0.0
       elif row['Type'] == 'Essay':
         # Grade essay questions using NLP-based semantic similarity
-        merged_df.at[index, 'Score'] = grade_essay(row['Students_Answer'], row['Answer'])
+        merged_df.at[index, 'Score'] = grade_essay(row['Answer'], row['Answer'])
 
     # Summarize scores per student
     student_scores = merged_df.groupby('StudentID', as_index=False)['Score'].sum()
@@ -92,6 +92,11 @@ def grade_questions(key_df, response_df):
   except Exception as e:
     st.error(f"Error during grading: {e}")
     return None
+
+if scores_df is not None:
+  st.dataframe(scores_df)  # Display the grading results in a table
+else:
+  st.error("Grading failed. Please check the input files and try again.")
 
 
 # Streamlit UI
@@ -119,7 +124,7 @@ response_file = st.file_uploader("*student submission.csv*", type=["csv"], key="
 
 # Define the expected column names for both uploaded files
 expected_key_columns = ["QuestionID", "Answer", "Type"]  # The correct answer file should have these columns
-expected_response_columns = ["StudentID", "QuestionID", "Students_Answer", "Type"]  # The student response file should have these columns
+expected_response_columns = ["StudentID", "QuestionID", "Answer", "Type"]  # The student response file should have these columns
 
 # Process the uploaded answer key file
 if key_file:  # If a file has been uploaded
@@ -147,7 +152,3 @@ if key_file and response_file and key_df is not None and response_df is not None
     st.subheader("Grading Results")
     scores_df = grade_questions(key_df, response_df)
 
-    if scores_df is not None:
-      st.dataframe(scores_df)  # Display the grading results in a table
-    else:
-      st.error("Grading failed. Please check the input files and try again.")
