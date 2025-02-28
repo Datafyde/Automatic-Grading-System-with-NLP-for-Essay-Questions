@@ -62,7 +62,7 @@ def grade_essay(students_answer, reference_answer, threshold=0.7):
 
 def grade_questions(key_df, response_df):
   """
-  Grades both objective (MCQ) and essay questions.
+  Grades both objective (MCQ) and ESSAY questions.
   """
   try:
     # Remove duplicates before merging to prevent incorrect mapping
@@ -89,6 +89,7 @@ def grade_questions(key_df, response_df):
 
     return student_scores
 
+
   except Exception as e:
     st.error(f"Error during grading: {e}")
     return None
@@ -98,6 +99,7 @@ def grade_questions(key_df, response_df):
     else:
       st.error("Grading failed. Please check the input files and try again.")
 
+  print(merged_df.columns)
 
 # Streamlit UI
 st.sidebar.header("Others")  # This section is for additional features, like refreshing the page, etc.
