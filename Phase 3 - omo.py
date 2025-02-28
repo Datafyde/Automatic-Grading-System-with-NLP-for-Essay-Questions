@@ -17,7 +17,7 @@ def grade_mcq(student_answer, correct_answer):
   """Grade multiple-choice questions using exact match"""
   return 1 if student_answer.strip().lower() == correct_answer.strip().lower() else 0
 
-def grade_essay(student_answer, reference_answer, threshold=9.0):
+def grade_essay(student_answer, reference_answer, threshold=0.6):
   """Grade essays using semantic similarity"""
   # Generate embeddings
   embeddings = model.encode([student_answer, reference_answer])
