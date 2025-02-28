@@ -135,7 +135,8 @@ if key_file:  # If a file has been uploaded
     st.error(key_error)  # Display the error message in red
   else:
     st.success("Correct answers uploaded and validated successfully.")  # Show a success message in green
-    st.dataframe(key_df.head())  # Display the first few rows of the validated file
+    #st.dataframe(key_df.head())  # Display the first few rows of the validated file
+    st.dataframe(key_df)  # Display the rows of the validated file
 
 # Process the uploaded student responses file
 if response_file:  # If a file has been uploaded
@@ -144,7 +145,8 @@ if response_file:  # If a file has been uploaded
     st.error(response_error)  # Display the error message in red
   else:
     st.success("Student's answers uploaded and validated successfully.")  # Show a success message in green
-    st.dataframe(response_df.head())  # Display the first few rows of the validated file
+    #st.dataframe(response_df.head())  # Display the first few rows of the validated file
+    st.dataframe(response_df)  # Display the rows of the validated file
 
 # Check if both files are validated successfully before showing the button
 if key_file and response_file and key_df is not None and response_df is not None:
