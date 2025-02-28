@@ -80,7 +80,7 @@ def grade_questions(key_df, response_df):
       if row['Type'] == 'MCQ':
         # Grade MCQ questions using exact match
         merged_df.at[index, 'Score'] = 1.0 if row['Answer'] == row['Answer'] else 0.0
-      elif row['Type'] == 'Essay':
+      elif row['Type'] == 'ESSAY':
         # Grade essay questions using NLP-based semantic similarity
         merged_df.at[index, 'Score'] = grade_essay(row['Answer'], row['Answer'])
 
