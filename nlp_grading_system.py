@@ -57,6 +57,9 @@ def grade_objective_questions(key_df, response_df):
         # Merge student responses with the assessment key
         merged_df = response_df.merge(key_df, on="QuestionID", how="left")
 
+        #correction by @YOMI
+        #merged_df = response_df.merge(key_df, on=['QuestionID','Question_Type'], how="left")
+
         # Assign scores (1.0 for correct, 0 for incorrect)
         merged_df['Score'] = (merged_df['Student_Answer'] == merged_df['Correct_Answer']).astype(float)
 

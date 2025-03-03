@@ -135,7 +135,8 @@ We need to install the following dependencies by running the commands below in v
 ```
 pip install streamlit
 pip install pandas
-pip -m spacy download en_core_web_sm OR pip -m spacy download en_core_web_lg 
+pip install spacy
+python -m spacy download en_core_web_sm OR python -m spacy download en_core_web_lg 
 ```
 Create the requirement.txt file
 ``` 

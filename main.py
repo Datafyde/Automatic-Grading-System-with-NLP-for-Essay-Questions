@@ -17,5 +17,5 @@ if btn == True:
     sim = res1.similarity(res2)
     st.write("Similarity Score: ", sim)
     #scale the similarity score to 10
-    sim = m.ceil(sim*10)
+    sim = m.ceil(sim*1)
     st.write("Scaled Score: ", sim)
