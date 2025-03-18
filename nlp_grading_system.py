@@ -70,6 +70,19 @@ def grade_essay_questions(key_df, response_df):
         print(f"Error: {e}")
         return None
 
+# Create a sidebar header
+st.sidebar.header("Others")  # This section is for additional features, like refreshing the page, etc.
+
+# Button to refresh the page and wipe uploaded files
+if "refresh" not in st.session_state:
+    st.session_state.refresh = False
+
+if st.sidebar.button("Refresh Page & Wipe Files", type="primary"):
+    st.session_state.clear()  # Clear all session state variables
+    st.rerun()
+    st.refresh()
+    
+
 # Streamlit UI
 st.title("Automatic Grading System")
 st.subheader("Upload the Assessment Key (CSV)")
