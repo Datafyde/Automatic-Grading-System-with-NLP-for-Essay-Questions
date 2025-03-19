@@ -1,0 +1,8 @@
+QuestionID,Correct_Answer,Question_Type,Marks_Obtainable
+1,A,Objective,2
+2,B,Objective,2
+3,C,Objective,2
+4,D,Objective,1
+5,A,Objective,3
+6,"Java requires variables to be explicitly declared before they can be used while python does not",Theory,5
+7,"Python is used for web an desktop application development and in machine learning while Java is used for mobile, web and desktop application development without machine learning",Theory,10

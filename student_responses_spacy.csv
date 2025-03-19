@@ -1,0 +1,22 @@
+StudentID,QuestionID,Student_Answer,Question_Type
+S001,1,A,Objective
+S001,2,B,Objective
+S001,3,D,Objective
+S001,4,B,Objective
+S001,5,D,Objective
+S002,1,A,Objective
+S002,2,C,Objective
+S002,3,C,Objective
+S002,4,A,Objective
+S002,5,C,Objective
+S003,1,B,Objective
+S003,2,B,Objective
+S003,3,C,Objective
+S003,4,D,Objective
+S003,5,A,Objective
+S001,6,"Java variables must be declared before they are used but python does not require such",Theory
+S001,7,"python is very powerful for machine learning, articifial intelligence and web application, but java is purely for application development for mobile, web and desktop platforms",Theory
+S002,6,"Variables in Java must be implicitly defined, python defines variables as they are assigned values",Theory
+S002,7,"Java and python are used for web and desktop application, but python excels in machine learning while java excels in mobile app development",Theory
+S003,6,"Java requires variables to be explicitly declared before they can be used while python does not",Theory
+S003,7,"Python is used for web and desktop application development and in machine learning while Java is used for mobile, web and desktop application development without machine learning",Theory
