@@ -95,7 +95,7 @@ def grade_essay_questions(key_df, response_df):
         print(f"Error: {e}")  # Print error message if grading fails
         return None
 
-
+#Function for Home Page
 def home_page():
     #Home Page
     st.title("Welcome to the Automatic Grading System")
@@ -105,7 +105,7 @@ def home_page():
     Upload your files and let the system do the grading for you!
     """)
 
-
+#Function for Grading System
 def grading_system_page():
     #Grading Page
     st.title("Automatic Grading System")
@@ -174,7 +174,7 @@ def grading_system_page():
             if col3.button("Refresh", type='primary'):
                 grading_system_page()
             
-
+#Function for User Guide
 def user_guide_page():
     #User Guide
     st.header("User Guide")
