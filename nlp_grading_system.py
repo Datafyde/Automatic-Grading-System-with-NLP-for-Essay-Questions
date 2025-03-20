@@ -2,7 +2,7 @@
 """
 Created on Wed Feb  5 17:15:57 2025
 
-@authors: YOMI, ADURA, OKON, SOLOMON, ABEL, AMOS, CHRISTIANA
+@authors: YOMI, ADURA, OKON, SOLOMON, ABEL, AMOS, CHRISTIANA, CORNELIUS
 """
 
 # Import necessary libraries
@@ -12,7 +12,7 @@ import numpy as np  # Numpy for numerical operations
 import time  # Time module for delays
 from sentence_transformers import SentenceTransformer, util  # Transformer model for grading essays
 
-# Load the sentence transformer model for text similarity
+# Load sentence transformer model for text similarity analysis
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Function to validate the uploaded CSV file
@@ -26,11 +26,11 @@ def validate_csv(file, expected_columns):
             return None, f"Missing columns: {', '.join(missing_columns)}"
         
         # Check for missing values in the dataset
-        if df.isnull().values.any():
+        elif df.isnull().values.any():
             return None, "The file contains missing values. Please check and re-upload."
         
         # Check for duplicate rows in the dataset
-        if df.duplicated().any():
+        elif df.duplicated().any():
             return None, "The file contains duplicate rows. Please check and re-upload."
         
         else:
@@ -95,78 +95,111 @@ def grade_essay_questions(key_df, response_df):
         print(f"Error: {e}")  # Print error message if grading fails
         return None
 
-# Create a sidebar header in Streamlit UI
-st.sidebar.header("Others")
 
-# Button to refresh the page and wipe uploaded files
-if "refresh" not in st.session_state:
-    st.session_state.refresh = False  # Initialize refresh state
+def home_page():
+    #Home Page
+    st.title("Welcome to the Automatic Grading System")
+    st.write("""
+    This project provides an automated system for grading both multiple-choice and essay-type questions.
+    The system uses predefined correct answers for MCQs and a deep learning model for evaluating the similarity of essay answers.
+    Upload your files and let the system do the grading for you!
+    """)
 
-if st.sidebar.button("Refresh", type="primary"):
-    st.session_state.clear()  # Clear all session state variables
-    st.rerun()  # Reload the page
-    st.refresh()
 
-# Streamlit UI for file uploads
-st.title("Automatic Grading System")
-st.subheader("Upload the Assessment Key (CSV)")
-key_file = st.file_uploader("*correct answers.csv*", type=["csv"], key="key_file")
-st.subheader("Upload the Student's Submission (CSV)")
-response_file = st.file_uploader("*student submission.csv*", type=["csv"], key="response_file")
-
-# Define expected column names
-expected_columns = ["QuestionID", "Correct_Answer", "Type"]
-expected_response_columns = ["StudentID", "QuestionID", "Student_Answer", "Type"]
-
-# Validate and display the answer key file
-if key_file:
-    key_df, key_error = validate_csv(key_file, expected_columns)
-    if key_error:
-        st.error(key_error)
-    else:
-        st.success("Correct answers uploaded successfully.")
-        st.dataframe(key_df)
-
-# Validate and display the student responses file
-if response_file:
-    response_df, response_error = validate_csv(response_file, expected_response_columns)
-    if response_error:
-        st.error(response_error)
-    else:
-        st.success("Student's answers uploaded successfully.")
-        st.dataframe(response_df)
-
-# Perform grading if both files are uploaded successfully
-if key_file and response_file and key_df is not None and response_df is not None:
-    if st.button("Show Results", type="primary"):
-        with st.spinner("In progress"):
-            time.sleep(5)  # Simulate processing time
+def grading_system_page():
+    #Grading Page
+    st.title("Automatic Grading System")
+    st.subheader("Upload the Assessment Key (CSV)")
+    key_file = st.file_uploader("*correct answers.csv*", type=["csv"], key="key_file")
+    st.subheader("Upload the Student's Submission (CSV)")
+    response_file = st.file_uploader("*student submission.csv*", type=["csv"], key="response_file")
+    
+    
+    expected_columns = ["QuestionID", "Correct_Answer", "Type"]
+    expected_response_columns = ["StudentID", "QuestionID", "Student_Answer", "Type"]
+    
+    if key_file:
+        key_df, key_error = validate_csv(key_file, expected_columns)
+        if key_error:
+            st.error(key_error)
+        else:
+            st.success("Correct answers uploaded successfully.")
+            st.dataframe(key_df)
+    
+    if response_file:
+        response_df, response_error = validate_csv(response_file, expected_response_columns)
+        if response_error:
+            st.error(response_error)
+        else:
+            st.success("Student's answers uploaded successfully.")
+            st.dataframe(response_df)
+    
+    if key_file and response_file and key_df is not None and response_df is not None:
+        if st.button("Show Results", type="primary"):
             
-        # Grade MCQ and Essay questions
-        mcq_scores = grade_mcq_questions(key_df, response_df)
-        essay_scores = grade_essay_questions(key_df, response_df)
+            with st.spinner("In progress"):
+                time.sleep(5)
+                
+            mcq_scores = grade_mcq_questions(key_df, response_df)
+            essay_scores = grade_essay_questions(key_df, response_df)
+            
+            if mcq_scores is not None:
+                st.success("MCQ Result.")
+                #st.subheader("MCQ Scores")
+                st.dataframe(mcq_scores)
+                
+            
+            if essay_scores is not None:
+                st.success("Essay Result.")
+                #st.subheader("Essay Scores")
+                st.dataframe(essay_scores)
+                
+                
+            if mcq_scores is not None and essay_scores is not None:
+                final_scores = pd.concat([mcq_scores, essay_scores]).groupby('StudentID', as_index=False)['Score'].sum()
+                st.success("Final Result.")
+                st.dataframe(final_scores)
+                #st.subheader("Final Scores")
+                file = final_scores.set_index('StudentID')
+                file = file.to_csv().encode("utf-8")
+            else:
+                st.error("Grading failed. Please check the input files and try again.")
+                
+            st.bar_chart(data=final_scores, x='StudentID', y='Score', horizontal=True, 
+                         height=300)
+            col1, col2, col3 = st.columns(3)
+
+            col1.download_button("Download final result", file_name="final.csv", data = file, 
+                                   mime="text/csv", type='primary')
+            if col3.button("Refresh", type='primary'):
+                grading_system_page()
+            
+
+def user_guide_page():
+    #User Guide
+    st.header("User Guide")
+
+
+# Ensure home page is the default landing page
+if "page" not in st.session_state:
+    st.session_state.page = "Home"
+
+# Sidebar navigation with buttons
+if st.sidebar.button("Home", type="primary"):
+    st.session_state.page = "Home"
+if st.sidebar.button("Grading System", type="primary"):
+    st.session_state.page = "Grading System"
+if st.sidebar.button("User Guide", type="primary"):
+    st.session_state.page = "User Guide"
+
+# Display home page content if selected
+if st.session_state.page == "Home":
+    home_page()
+
+# Display grading system content if selected
+elif st.session_state.page == "Grading System":
+    grading_system_page()
+    
         
-        # Display MCQ results
-        if mcq_scores is not None:
-            st.success("MCQ Result.")
-            st.dataframe(mcq_scores)
-        
-        # Display Essay results
-        if essay_scores is not None:
-            st.success("Essay Result.")
-            st.dataframe(essay_scores)
-        
-        # Combine MCQ and Essay scores
-        if mcq_scores is not None and essay_scores is not None:
-            final_scores = pd.concat([mcq_scores, essay_scores]).groupby('StudentID', as_index=False)['Score'].sum()
-            st.success("Final Result.")
-            st.dataframe(final_scores)
-            
-            # Convert final scores to CSV for download
-            file = final_scores.to_csv(index=False).encode("utf-8")
-            
-            # Display bar chart for results
-            st.bar_chart(data=final_scores, x='StudentID', y='Score', horizontal=True, height=300)
-            
-            # Provide download button for final results
-            st.download_button("Download final result", file_name="final.csv", data=file, mime="text/csv", type='primary')
+else:
+    user_guide_page()
