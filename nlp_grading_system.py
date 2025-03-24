@@ -159,10 +159,10 @@ Student Industrial Work Experience Scheme (SIWES) II Placement from the Data Sci
 - **[Yomi Aladare](https://github.com/yomi-aledare)**
 - **[Solomon Ayuba](https://github.com/SolomonAyuba)**
 - **[Okon Enang](https://github.com/Nanoshogun)**
-- **[Cornelius Alobu](https://github.com/pkinoshi)**
-- **[Amos Adejesubisi](https://github.com/pkinoshi)**
-- **[Abel Odemudia](https://github.com/pkinoshi)**
-- **[Christiana Richards](https://github.com/pkinoshi)**
+- **[Cornelius Alobu](https://github.com/)**
+- **[Amos Adejesubisi](https://github.com/)**
+- **[Abel Odemudia](https://github.com/)**
+- **[Christiana Richards](https://github.com/)**
 
 
 """
