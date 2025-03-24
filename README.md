@@ -38,6 +38,7 @@ We need to install the following dependencies by running the commands below in v
 pip install streamlit
 pip install pandas
 pip install spacy
+pip install sentence-transformers
 ```
 
 Install the `spaCy` English model:
@@ -142,16 +143,3 @@ The implementation is based on Streamlit. Here’s a brief summary of the code:
 
 ## 9. Conclusion
 This project demonstrates how machine learning and NLP can automate grading to save time and improve consistency. By integrating semantic analysis for essay-type questions, the system ensures fair evaluation based on meaning rather than exact wording. This framework can be further expanded for diverse educational needs and enhanced with additional functionalities.
-
-## 10. Setup and Installation of Dependencies
-We need to install the following dependencies by running the commands below in vscode terminal or command prompt or terminal:
-```
-pip install streamlit
-pip install pandas
-pip install spacy
-python -m spacy download en_core_web_sm OR python -m spacy download en_core_web_lg
-```
-Create the requirement.txt file
-```
-pip install pipreqs
-```
