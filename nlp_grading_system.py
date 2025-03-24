@@ -373,7 +373,7 @@ def user_guide_page():
     """)
 
     #st.title("User Guide")  # Set the page title
-    st.markdown(user_guide, unsafe_allow_html=True)  # Render the Markdown content in Streamlit with formatting
+    # st.markdown(user_guide, unsafe_allow_html=True)  # Render the Markdown content in Streamlit with formatting
 
 
 

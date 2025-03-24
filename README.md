@@ -31,10 +31,23 @@ The goal of this project is to develop a [Streamlit-based](https://youtu.be/2siB
   - `streamlit`
   - `pandas`
   - `spacy`
-  
-### 4.2. Software Dependencies
-- Install the `spaCy` English model:
- ``` python -m spacy download en_core_web_sm```
+
+### 4.2. Setup and Software Dependencies
+We need to install the following dependencies by running the commands below in vscode terminal or command prompt or terminal:
+```
+pip install streamlit
+pip install pandas
+pip install spacy
+```
+
+Install the `spaCy` English model:
+
+   `python -m spacy download en_core_web_sm` OR `python -m spacy download en_core_web_lg`
+
+Create the requirement.txt file
+```
+pip install pipreqs
+```
 
 ## 5. Project Workflow
 ### 5.1. Input Files
@@ -43,7 +56,7 @@ The goal of this project is to develop a [Streamlit-based](https://youtu.be/2siB
       - **Question:** Unique identifier for each question.
       - **Answer:** Correct answer for the question.
       - **Type:** Type of question (objective or essay).
-        
+
     - Example:
 
       | Question | Answer | Type |
@@ -136,9 +149,9 @@ We need to install the following dependencies by running the commands below in v
 pip install streamlit
 pip install pandas
 pip install spacy
-python -m spacy download en_core_web_sm OR python -m spacy download en_core_web_lg 
+python -m spacy download en_core_web_sm OR python -m spacy download en_core_web_lg
 ```
 Create the requirement.txt file
-``` 
-pip install pipreqs   
+```
+pip install pipreqs
 ```
