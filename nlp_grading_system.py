@@ -2,7 +2,7 @@
 """
 Created on Wed Feb  5 17:15:57 2025
 
-@authors: YOMI, ADURA, OKON, SOLOMON, ABEL, AMOS, CHRISTIANA
+@authors: YOMI, ADURA, OKON, SOLOMON, ABEL, AMOS, CHRISTIANA, CORNELIUS
 """
 
 # Import necessary libraries
