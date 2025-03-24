@@ -2,7 +2,7 @@
 """
 Created on Wed Feb  5 17:15:57 2025
 
-@authors: YOMI, ADURA, OKON, SOLOMON, ABEL, AMOS, CHRISTIANA, CORNELIUS
+@authors: YOMI, ADURA, OKON, SOLOMON, ABEL, AMOS, CHRISTIANA
 """
 
 # Import necessary libraries
@@ -95,17 +95,67 @@ def grade_essay_questions(key_df, response_df):
         print(f"Error: {e}")  # Print error message if grading fails
         return None
 
-#Function for Home Page
+
+# Documentation content
+documentation = """
+
+
+## Overview
+The **Automatic Grading System** is a tool designed to evaluate student answers for both **multiple-choice questions (MCQs)** and **essay-type questions**. It compares MCQ answers directly and uses a deep learning model to assess the similarity between student and correct essay answers. This system automates the grading process, ensuring accuracy and efficiency.
+
+## Features
+- Supports both **MCQs** and **Essay** questions.
+- Uses **predefined answer keys** for grading MCQs.
+- Employs a **sentence transformer model** for grading essays.
+- **Validates** uploaded CSV files to check for missing data or errors.
+- Generates **final scores** for each student.
+- Provides **data visualization** through charts.
+- Allows users to **download results** in CSV format.
+
+## Workflow
+### 1. Uploading the Required Files
+Users need to upload two CSV files:
+- **Assessment Key File**: Contains the correct answers and question types.
+- **Student Submission File**: Contains student responses.
+
+The system verifies that these files have the necessary columns and do not contain missing or duplicate data.
+
+### 2. Grading Process
+#### **MCQ Grading**
+- Extracts MCQ-type questions from both uploaded files.
+- Removes duplicate questions and responses.
+- Compares student answers with correct answers.
+- Assigns a score of **1 for correct answers** and **0 for incorrect answers**.
+
+#### **Essay Grading**
+- Extracts essay-type questions from both files.
+- Uses a **sentence transformer model** to compute the **cosine similarity** between student answers and the correct answers.
+- Assigns a score between **0 to 10**, where higher similarity results in a higher score.
+
+### 3. Displaying and Downloading Results
+- The system **compiles scores** for both MCQs and essays.
+- Final scores are displayed along with a **bar chart** visualization.
+- Users can **download** the final results as a CSV file.
+
+## Navigation
+The grading system includes a **user-friendly interface** with three main sections:
+1. **Home Page**: Introduction to the grading system.
+2. **Grading System Page**: File uploads, grading, and results.
+3. **User Guide Page**: Instructions on how to use the system.
+
+## Conclusion
+The **Automatic Grading System** simplifies the evaluation process, providing fast and accurate grading for MCQs and essays. By leveraging AI and automation, it ensures efficiency and fairness in assessments.
+"""
+
+
+#PAGES
 def home_page():
     #Home Page
     st.title("Welcome to the Automatic Grading System")
-    st.write("""
-    This project provides an automated system for grading both multiple-choice and essay-type questions.
-    The system uses predefined correct answers for MCQs and a deep learning model for evaluating the similarity of essay answers.
-    Upload your files and let the system do the grading for you!
-    """)
+    #st.header("Documentation")
+    st.markdown(documentation, unsafe_allow_html=True)
 
-#Function for Grading System
+
 def grading_system_page():
     #Grading Page
     st.title("Automatic Grading System")
@@ -174,10 +224,72 @@ def grading_system_page():
             if col3.button("Refresh", type='primary'):
                 grading_system_page()
             
-#Function for User Guide
+
 def user_guide_page():
-    #User Guide
-    st.header("User Guide")
+
+    # User Guide content as a Markdown string
+    user_guide = """
+    # User Guide - Automatic Grading System
+    
+    ## Introduction
+    Welcome to the **Automatic Grading System**! This guide provides step-by-step instructions on how to use the system to evaluate student assessments efficiently.
+    
+    ## Steps to Use the System
+    ### 1. Navigate to the Grading System Page
+    - Click on the **Grading System** option in the sidebar to start grading.
+    
+    ### 2. Upload Required Files
+    #### **Assessment Key File**
+    - Upload a CSV file containing the correct answers.
+    - Ensure the file has the following columns:
+      - `QuestionID`
+      - `Correct_Answer`
+      - `Type` (MCQ or ESSAY)
+    
+    #### **Student Submission File**
+    - Upload a CSV file containing student responses.
+    - Ensure the file has the following columns:
+      - `StudentID`
+      - `QuestionID`
+      - `Student_Answer`
+      - `Type` (MCQ or ESSAY)
+    
+    ### 3. Validate Uploaded Files
+    - The system will automatically check for missing or duplicate data.
+    - If errors are found, you will receive a notification to correct and re-upload the files.
+    
+    ### 4. Start the Grading Process
+    - Click the **Show Results** button to begin grading.
+    - The system will process MCQs and essays separately:
+      - **MCQs** are graded based on exact matching.
+      - **Essays** are graded using a sentence similarity model.
+    
+    ### 5. View and Download Results
+    - The results will be displayed in three sections:
+      1. **MCQ Scores**
+      2. **Essay Scores**
+      3. **Final Scores** (combined MCQ and Essay scores)
+    - A bar chart visualization is also provided for better insights.
+    - Click the **Download Final Result** button to save the scores as a CSV file.
+    
+    ### 6. Refresh the Page
+    - If needed, click the **Refresh** button to start a new grading session.
+    
+    ## Troubleshooting
+    ### Common Issues & Solutions
+    | Issue | Solution |
+    |--------|----------|
+    | Missing columns error | Ensure the uploaded file includes all required columns. |
+    | Duplicate rows error | Remove duplicate rows before uploading. |
+    | Grading failed | Check if the correct file format (CSV) is used. |
+    
+    ## Conclusion
+    By following these steps, you can efficiently grade student assessments using the **Automatic Grading System**. If you encounter any issues, ensure your files are correctly formatted and try again.
+    """
+    
+    #st.title("User Guide")  # Set the page title
+    st.markdown(user_guide, unsafe_allow_html=True)  # Render the Markdown content in Streamlit with formatting
+
 
 
 # Ensure home page is the default landing page
