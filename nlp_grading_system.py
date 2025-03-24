@@ -237,10 +237,20 @@ def user_guide_page():
     ## Steps to Use the System
     ### 1. Navigate to the Grading System Page
     - Click on the **Grading System** option in the sidebar to start grading.
+    """
 
-    <img width="700" alt="Data Dictionary" src="User Guide/Step 1.png">
+    # Display text content
+    st.markdown(user_guide, unsafe_allow_html=True)
 
+    # Display screenshot of step
+    st.image(
+      "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%201.png",
+      caption="Navigating to the Grading System",
+      width=700
+    )
 
+    # Continue with the rest of the guide
+    st.markdown("""
     ### 2. Upload Required Files
     #### **Assessment Key File**
     - Upload a CSV file containing the correct answers.
@@ -248,7 +258,17 @@ def user_guide_page():
       - `QuestionID`
       - `Correct_Answer`
       - `Type` (MCQ or ESSAY)
+    """)
 
+    # Display screenshot of step
+    st.image(
+      "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%202.png",
+      caption="Upload Required Files",
+      width=700
+    )
+
+    # Continue with the rest of the guide
+    st.markdown("""
     #### **Student Submission File**
     - Upload a CSV file containing student responses.
     - Ensure the file has the following columns:
@@ -256,10 +276,36 @@ def user_guide_page():
       - `QuestionID`
       - `Student_Answer`
       - `Type` (MCQ or ESSAY)
+    """)
 
+    # Display screenshot of step
+    st.image(
+      "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%203.png",
+      caption="Upload Required Files",
+      width=700
+    )
+
+    # Continue with the rest of the guide
+    st.markdown("""
     ### 3. Validate Uploaded Files
     - The system will automatically check for missing or duplicate data.
     - If errors are found, you will receive a notification to correct and re-upload the files.
+    """)
+
+    # Display screenshot of step
+    st.image(
+      "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%203%20Error%20Message.png",
+      caption="Validate Uploaded Files",
+      width=700
+    )
+    st.image(
+      "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%203%20Fixed.png",
+      caption="Uploaded Files Validated",
+      width=700
+    )
+
+    # Continue with the rest of the guide
+    st.markdown("""
 
     ### 4. Start the Grading Process
     - Click the **Show Results** button to begin grading.
@@ -288,7 +334,7 @@ def user_guide_page():
 
     ## Conclusion
     By following these steps, you can efficiently grade student assessments using the **Automatic Grading System**. If you encounter any issues, ensure your files are correctly formatted and try again.
-    """
+    """)
 
     #st.title("User Guide")  # Set the page title
     st.markdown(user_guide, unsafe_allow_html=True)  # Render the Markdown content in Streamlit with formatting
