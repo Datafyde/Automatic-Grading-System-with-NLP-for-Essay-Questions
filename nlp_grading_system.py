@@ -144,9 +144,28 @@ The grading system includes a **user-friendly interface** with three main sectio
 3. **User Guide Page**: Instructions on how to use the system.
 
 ## Conclusion
-The **Automatic Grading System** simplifies the evaluation process, providing fast and accurate grading for MCQs and essays. By leveraging AI and automation, it ensures efficiency and fairness in assessments.
+The **Automatic Grading System** simplifies the evaluation process, providing fast and accurate grading for MCQs and essays.
+By leveraging AI and automation, it ensures efficiency and fairness in assessments.
 """
 
+# About Page content
+about = """
+“Courtesy of [Datafied Academy (2025)](https://github.com/Datafyde), this project is a deliverable of the
+Student Industrial Work Experience Scheme (SIWES) II Placement from the Data Science students ("23) at
+[Miva Open University](https://miva.university/).
+
+### Team members
+- [Aduragbemi Kinoshi](https://github.com/pkinoshi)
+- [Yomi Aladare](https://github.com/yomi-aledare)
+- [Solomon Ayuba](https://github.com/SolomonAyuba)
+- [Okon Enang](https://github.com/Nanoshogun)
+- [Cornelius Alobu](https://github.com/pkinoshi)
+- [Amos Adejesubisi](https://github.com/pkinoshi)
+- [Abel Odemudia](https://github.com/pkinoshi)
+- [Christiana Richards](https://github.com/pkinoshi)
+
+
+"""
 
 #PAGES
 def home_page():
@@ -373,8 +392,13 @@ def user_guide_page():
     """)
 
     #st.title("User Guide")  # Set the page title
-    # st.markdown(user_guide, unsafe_allow_html=True)  # Render the Markdown content in Streamlit with formatting
+    #st.markdown(user_guide, unsafe_allow_html=True)  # Render the Markdown content in Streamlit with formatting
 
+def about_page():
+  #Home Page
+  st.title("About")
+  #st.header("Documentation")
+  st.markdown(about, unsafe_allow_html=True)
 
 
 # Ensure home page is the default landing page
@@ -388,6 +412,8 @@ if st.sidebar.button("Grading System", type="primary"):
     st.session_state.page = "Grading System"
 if st.sidebar.button("User Guide", type="primary"):
     st.session_state.page = "User Guide"
+if st.sidebar.button("About", type="primary"):
+      st.session_state.page = "About"
 
 # Display home page content if selected
 if st.session_state.page == "Home":
@@ -397,6 +423,9 @@ if st.session_state.page == "Home":
 elif st.session_state.page == "Grading System":
     grading_system_page()
 
+# Display user guide content if selected
+elif st.session_state.page == "User Guide":
+  user_guide_page()
 
 else:
-    user_guide_page()
+    about_page()
