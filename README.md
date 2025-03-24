@@ -31,9 +31,10 @@ The goal of this project is to develop a [Streamlit-based](https://youtu.be/2siB
   - `streamlit`
   - `pandas`
   - `spacy`
+  - `sentence-transformers`
 
 ### 4.2. Setup and Software Dependencies
-We need to install the following dependencies by running the commands below in vscode terminal or command prompt or terminal:
+We need to install the following dependencies by running the commands below in the DE terminal or command prompt:
 ```
 pip install streamlit
 pip install pandas
