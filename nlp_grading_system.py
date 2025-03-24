@@ -138,10 +138,11 @@ The system verifies that these files have the necessary columns and do not conta
 - Users can **download** the final results as a CSV file.
 
 ## Navigation
-The grading system includes a **user-friendly interface** with three main sections:
+The grading system includes a **user-friendly interface** with four main sections:
 1. **Home Page**: Introduction to the grading system.
 2. **Grading System Page**: File uploads, grading, and results.
 3. **User Guide Page**: Instructions on how to use the system.
+4. **About Page**: Credits and acknowledgements.
 
 ## Conclusion
 The **Automatic Grading System** simplifies the evaluation process, providing fast and accurate grading for MCQs and essays.
