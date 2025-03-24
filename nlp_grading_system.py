@@ -150,19 +150,19 @@ By leveraging AI and automation, it ensures efficiency and fairness in assessmen
 
 # About Page content
 about = """
-“Courtesy of [Datafied Academy (2025)](https://github.com/Datafyde), this project is a deliverable of the
+Courtesy of [Datafied Academy (2025)](https://github.com/Datafyde), this project is a deliverable of the
 Student Industrial Work Experience Scheme (SIWES) II Placement from the Data Science students ("23) at
 [Miva Open University](https://miva.university/).
 
 ### Team members
-- [Aduragbemi Kinoshi](https://github.com/pkinoshi)
-- [Yomi Aladare](https://github.com/yomi-aledare)
-- [Solomon Ayuba](https://github.com/SolomonAyuba)
-- [Okon Enang](https://github.com/Nanoshogun)
-- [Cornelius Alobu](https://github.com/pkinoshi)
-- [Amos Adejesubisi](https://github.com/pkinoshi)
-- [Abel Odemudia](https://github.com/pkinoshi)
-- [Christiana Richards](https://github.com/pkinoshi)
+- **[Aduragbemi Kinoshi](https://github.com/pkinoshi)**
+- **[Yomi Aladare](https://github.com/yomi-aledare)**
+- **[Solomon Ayuba](https://github.com/SolomonAyuba)**
+- **[Okon Enang](https://github.com/Nanoshogun)**
+- **[Cornelius Alobu](https://github.com/pkinoshi)**
+- **[Amos Adejesubisi](https://github.com/pkinoshi)**
+- **[Abel Odemudia](https://github.com/pkinoshi)**
+- **[Christiana Richards](https://github.com/pkinoshi)**
 
 
 """
