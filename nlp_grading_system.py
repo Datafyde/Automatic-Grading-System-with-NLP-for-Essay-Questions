@@ -329,9 +329,36 @@ def user_guide_page():
       3. **Final Scores** (combined MCQ and Essay scores)
     - A bar chart visualization is also provided for better insights.
     - Click the **Download Final Result** button to save the scores as a CSV file.
+    """)
 
+    # Display screenshot of step
+    st.image(
+      "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%205%20Scores.png",
+      caption="MCQ and Esasy Scores",
+      width=700
+    )
+
+    st.image(
+      "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%205%20Chart.png",
+      caption="Bar Chart Visualization & Download Results",
+      width=700
+    )
+
+    # Continue with the rest of the guide
+    st.markdown("""
     ### 6. Refresh the Page
     - If needed, click the **Refresh** button to start a new grading session.
+    """)
+
+    # Display screenshot of step
+    st.image(
+      "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%206.png",
+      caption="Refresh Button",
+      width=700
+    )
+
+    # Continue with the rest of the guide
+    st.markdown("""
 
     ## Troubleshooting
     ### Common Issues & Solutions
