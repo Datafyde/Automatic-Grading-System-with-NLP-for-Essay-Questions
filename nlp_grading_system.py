@@ -295,7 +295,7 @@ def user_guide_page():
     # Display screenshot of step
     st.image(
       "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%203%20Error%20Message.png",
-      caption="Validate Uploaded Files",
+      caption="Invalid Uploaded Files",
       width=700
     )
     st.image(
@@ -306,13 +306,22 @@ def user_guide_page():
 
     # Continue with the rest of the guide
     st.markdown("""
-
     ### 4. Start the Grading Process
     - Click the **Show Results** button to begin grading.
     - The system will process MCQs and essays separately:
       - **MCQs** are graded based on exact matching.
       - **Essays** are graded using a sentence similarity model.
+    """)
 
+    # Display screenshot of step
+    st.image(
+      "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%204.png",
+      caption="Upload Required Files",
+      width=700
+    )
+
+    # Continue with the rest of the guide
+    st.markdown("""
     ### 5. View and Download Results
     - The results will be displayed in three sections:
       1. **MCQ Scores**
