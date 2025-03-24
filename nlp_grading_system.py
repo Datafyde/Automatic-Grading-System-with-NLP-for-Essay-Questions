@@ -245,7 +245,7 @@ def user_guide_page():
     # Display screenshot of step
     st.image(
       "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%201.png",
-      caption="Navigating to the Grading System",
+      caption="Click on Grading System",
       width=700
     )
 
@@ -263,7 +263,7 @@ def user_guide_page():
     # Display screenshot of step
     st.image(
       "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%202.png",
-      caption="Upload Required Files",
+      caption="Upload .CSV Correct Answers file",
       width=700
     )
 
@@ -281,7 +281,7 @@ def user_guide_page():
     # Display screenshot of step
     st.image(
       "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%203.png",
-      caption="Upload Required Files",
+      caption="Upload .CSV Student Submission File",
       width=700
     )
 
@@ -316,7 +316,7 @@ def user_guide_page():
     # Display screenshot of step
     st.image(
       "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%204.png",
-      caption="Upload Required Files",
+      caption="Click on Show Results",
       width=700
     )
 
@@ -353,7 +353,7 @@ def user_guide_page():
     # Display screenshot of step
     st.image(
       "https://raw.githubusercontent.com/Datafyde/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/Step%206.png",
-      caption="Refresh Button",
+      caption="Click on Refresh Button",
       width=700
     )
 
