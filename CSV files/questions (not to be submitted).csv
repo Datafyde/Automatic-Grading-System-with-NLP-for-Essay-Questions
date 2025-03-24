@@ -1,0 +1,63 @@
+questions,,
+assessment_key,,
+QuestionID,Question,Type
+Q1,A,MCQ
+Q2,D,MCQ
+Q3,B,MCQ
+Q4,C,MCQ
+Q5,"What is Data Science, and why is it important?",ESSAY
+Q6,What are the key steps in the Data Science process?,ESSAY
+Q7,What is the difference between supervised and unsupervised learning?,ESSAY
+Q8,"What is a dataset, and what are its common components?",ESSAY
+Q9,Why is data cleaning important in Data Science?,ESSAY
+Q10,What is the role of visualization in Data Science?,ESSAY
+Q11,C,MCQ
+Q12,A,MCQ
+Q13,D,MCQ
+Q14,B,MCQ
+Q15,A,MCQ
+Q16,D,MCQ
+Q17,B,MCQ
+Q18,B,MCQ
+Q19,A,MCQ
+Q20,C,MCQ
+Q21,C,MCQ
+Q22,D,MCQ
+Q23,A,MCQ
+Q24,B,MCQ
+Q25,A,MCQ
+Q26,A,MCQ
+Q27,D,MCQ
+Q28,D,MCQ
+Q29,A,MCQ
+Q30,B,MCQ
+Q31,What does SQL stand for?,ESSAY
+Q32,What is the main purpose of data visualization?,ESSAY
+Q33,What is the process of finding hidden patterns in large datasets called?,ESSAY
+Q34,What type of algorithm is used for classification tasks?,ESSAY
+Q35,What is the term for data that does not follow a structured format?,ESSAY
+Q36,What is the output variable in a predictive model called?,ESSAY
+Q37,What is the main purpose of feature engineering?,ESSAY
+Q38,What programming language is widely used in data science?,ESSAY
+Q39,What does ETL stand for in data processing?,ESSAY
+Q40,What is the purpose of a confusion matrix?,ESSAY
+Q41,What organ pumps blood throughout the body?,ESSAY
+Q42,Which vitamin is produced by the skin when exposed to sunlight?,ESSAY
+Q43,What is the primary function of the lungs?,ESSAY
+Q44,Which disease is caused by a deficiency of insulin?,ESSAY
+Q45,What is the largest organ in the human body?,ESSAY
+Q46,What does BMI stand for in health assessment?,ESSAY
+Q47,Which blood type is the universal donor?,ESSAY
+Q48,What is the term for a disease that spreads rapidly across the world?,ESSAY
+Q49,What is the function of red blood cells?,ESSAY
+Q50,What is the medical term for high blood pressure?,ESSAY
+Q51,What is the primary role of a constitution?,ESSAY
+Q52,Which political system allows citizens to vote directly on laws?,ESSAY
+Q53,What do we call a government ruled by a king or queen?,ESSAY
+Q54,What is the main function of the legislative branch in government?,ESSAY
+Q55,What international organization was founded to maintain world peace after WWII?,ESSAY
+Q56,Which country has the world's largest democracy?,ESSAY
+Q57,What is the capital city of France?,ESSAY
+Q58,What is the longest river in the world?,ESSAY
+Q59,What is the largest continent by land area?,ESSAY
+Q60,Who was Nigeria’s first president?,ESSAY
