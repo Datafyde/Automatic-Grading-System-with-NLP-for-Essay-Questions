@@ -19,20 +19,20 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 def validate_csv(file, expected_columns):
     try:
         df = pd.read_csv(file)  # Read CSV file into a DataFrame
-        
+
         # Check for missing columns in the uploaded file
         missing_columns = [col for col in expected_columns if col not in df.columns]
         if missing_columns:
             return None, f"Missing columns: {', '.join(missing_columns)}"
-        
+
         # Check for missing values in the dataset
         elif df.isnull().values.any():
             return None, "The file contains missing values. Please check and re-upload."
-        
+
         # Check for duplicate rows in the dataset
         elif df.duplicated().any():
             return None, "The file contains duplicate rows. Please check and re-upload."
-        
+
         else:
             return df, None  # Return validated DataFrame
     except Exception as e:
@@ -44,19 +44,19 @@ def grade_mcq_questions(key_df, response_df):
         # Filter only MCQ type questions from the dataset
         key_df = key_df[key_df['Type'] == 'MCQ']
         response_df = response_df[response_df['Type'] == 'MCQ']
-        
+
         # Remove duplicate questions in the answer key
         key_df = key_df.drop_duplicates(subset=['QuestionID'])
-        
+
         # Remove duplicate responses for a student-question pair
         response_df = response_df.drop_duplicates(subset=['StudentID', 'QuestionID'])
-        
+
         # Merge student responses with correct answers based on QuestionID and Type
         merged_df = response_df.merge(key_df, on=['QuestionID', 'Type'], how="left")
-        
+
         # Compare student answers with correct answers and assign score (1 for correct, 0 for incorrect)
         merged_df['Score'] = (merged_df['Student_Answer'] == merged_df['Correct_Answer']).astype(float)
-        
+
         # Return total scores for each student
         return merged_df.groupby('StudentID', as_index=False)['Score'].sum()
     except Exception as e:
@@ -69,26 +69,26 @@ def grade_essay_questions(key_df, response_df):
         # Filter only essay-type questions from the dataset
         key_df = key_df[key_df['Type'] == 'ESSAY']
         response_df = response_df[response_df['Type'] == 'ESSAY']
-        
+
         # Remove duplicate questions in the answer key
         key_df = key_df.drop_duplicates(subset=['QuestionID'])
-        
+
         # Remove duplicate responses for a student-question pair
         response_df = response_df.drop_duplicates(subset=['StudentID', 'QuestionID'])
-        
+
         # Merge student responses with correct answers based on QuestionID and Type
         merged_df = response_df.merge(key_df, on=['QuestionID', 'Type'], how="left")
-        
+
         # Function to compute similarity between correct and student answer
         def compute_similarity(row):
             correct_embedding = model.encode(row['Correct_Answer'], convert_to_tensor=True)  # Encode correct answer
             student_embedding = model.encode(row['Student_Answer'], convert_to_tensor=True)  # Encode student answer
             similarity = util.pytorch_cos_sim(correct_embedding, student_embedding).item()  # Compute cosine similarity
             return 10 if similarity >= 0.75 else round(similarity*10)  # Convert similarity score to a scale of 10
-        
+
         # Apply similarity function to each row
         merged_df['Score'] = merged_df.apply(compute_similarity, axis=1)
-        
+
         # Return total scores for each student
         return merged_df.groupby('StudentID', as_index=False)['Score'].sum()
     except Exception as e:
@@ -163,11 +163,11 @@ def grading_system_page():
     key_file = st.file_uploader("*correct answers.csv*", type=["csv"], key="key_file")
     st.subheader("Upload the Student's Submission (CSV)")
     response_file = st.file_uploader("*student submission.csv*", type=["csv"], key="response_file")
-    
-    
+
+
     expected_columns = ["QuestionID", "Correct_Answer", "Type"]
     expected_response_columns = ["StudentID", "QuestionID", "Student_Answer", "Type"]
-    
+
     if key_file:
         key_df, key_error = validate_csv(key_file, expected_columns)
         if key_error:
@@ -175,7 +175,7 @@ def grading_system_page():
         else:
             st.success("Correct answers uploaded successfully.")
             st.dataframe(key_df)
-    
+
     if response_file:
         response_df, response_error = validate_csv(response_file, expected_response_columns)
         if response_error:
@@ -183,28 +183,28 @@ def grading_system_page():
         else:
             st.success("Student's answers uploaded successfully.")
             st.dataframe(response_df)
-    
+
     if key_file and response_file and key_df is not None and response_df is not None:
         if st.button("Show Results", type="primary"):
-            
+
             with st.spinner("In progress"):
                 time.sleep(5)
-                
+
             mcq_scores = grade_mcq_questions(key_df, response_df)
             essay_scores = grade_essay_questions(key_df, response_df)
-            
+
             if mcq_scores is not None:
                 st.success("MCQ Result.")
                 #st.subheader("MCQ Scores")
                 st.dataframe(mcq_scores)
-                
-            
+
+
             if essay_scores is not None:
                 st.success("Essay Result.")
                 #st.subheader("Essay Scores")
                 st.dataframe(essay_scores)
-                
-                
+
+
             if mcq_scores is not None and essay_scores is not None:
                 final_scores = pd.concat([mcq_scores, essay_scores]).groupby('StudentID', as_index=False)['Score'].sum()
                 st.success("Final Result.")
@@ -214,30 +214,33 @@ def grading_system_page():
                 file = file.to_csv().encode("utf-8")
             else:
                 st.error("Grading failed. Please check the input files and try again.")
-                
-            st.bar_chart(data=final_scores, x='StudentID', y='Score', horizontal=True, 
+
+            st.bar_chart(data=final_scores, x='StudentID', y='Score', horizontal=True,
                          height=300)
             col1, col2, col3 = st.columns(3)
 
-            col1.download_button("Download final result", file_name="final.csv", data = file, 
+            col1.download_button("Download final result", file_name="final.csv", data = file,
                                    mime="text/csv", type='primary')
             if col3.button("Refresh", type='primary'):
                 grading_system_page()
-            
+
 
 def user_guide_page():
 
     # User Guide content as a Markdown string
     user_guide = """
     # User Guide - Automatic Grading System
-    
+
     ## Introduction
     Welcome to the **Automatic Grading System**! This guide provides step-by-step instructions on how to use the system to evaluate student assessments efficiently.
-    
+
     ## Steps to Use the System
     ### 1. Navigate to the Grading System Page
     - Click on the **Grading System** option in the sidebar to start grading.
-    
+
+    <img width="700" alt="Data Dictionary" src="User Guide/Step 1.png">
+
+
     ### 2. Upload Required Files
     #### **Assessment Key File**
     - Upload a CSV file containing the correct answers.
@@ -245,7 +248,7 @@ def user_guide_page():
       - `QuestionID`
       - `Correct_Answer`
       - `Type` (MCQ or ESSAY)
-    
+
     #### **Student Submission File**
     - Upload a CSV file containing student responses.
     - Ensure the file has the following columns:
@@ -253,17 +256,17 @@ def user_guide_page():
       - `QuestionID`
       - `Student_Answer`
       - `Type` (MCQ or ESSAY)
-    
+
     ### 3. Validate Uploaded Files
     - The system will automatically check for missing or duplicate data.
     - If errors are found, you will receive a notification to correct and re-upload the files.
-    
+
     ### 4. Start the Grading Process
     - Click the **Show Results** button to begin grading.
     - The system will process MCQs and essays separately:
       - **MCQs** are graded based on exact matching.
       - **Essays** are graded using a sentence similarity model.
-    
+
     ### 5. View and Download Results
     - The results will be displayed in three sections:
       1. **MCQ Scores**
@@ -271,10 +274,10 @@ def user_guide_page():
       3. **Final Scores** (combined MCQ and Essay scores)
     - A bar chart visualization is also provided for better insights.
     - Click the **Download Final Result** button to save the scores as a CSV file.
-    
+
     ### 6. Refresh the Page
     - If needed, click the **Refresh** button to start a new grading session.
-    
+
     ## Troubleshooting
     ### Common Issues & Solutions
     | Issue | Solution |
@@ -282,11 +285,11 @@ def user_guide_page():
     | Missing columns error | Ensure the uploaded file includes all required columns. |
     | Duplicate rows error | Remove duplicate rows before uploading. |
     | Grading failed | Check if the correct file format (CSV) is used. |
-    
+
     ## Conclusion
     By following these steps, you can efficiently grade student assessments using the **Automatic Grading System**. If you encounter any issues, ensure your files are correctly formatted and try again.
     """
-    
+
     #st.title("User Guide")  # Set the page title
     st.markdown(user_guide, unsafe_allow_html=True)  # Render the Markdown content in Streamlit with formatting
 
@@ -311,7 +314,7 @@ if st.session_state.page == "Home":
 # Display grading system content if selected
 elif st.session_state.page == "Grading System":
     grading_system_page()
-    
-        
+
+
 else:
     user_guide_page()
