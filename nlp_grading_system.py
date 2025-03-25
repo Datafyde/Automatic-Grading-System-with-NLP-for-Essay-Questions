@@ -149,6 +149,18 @@ The **Automatic Grading System** simplifies the evaluation process, providing fa
 By leveraging AI and automation, it ensures efficiency and fairness in assessments.
 """
 
+# User Guide content as a Markdown string
+user_guide = """
+# User Guide - Automatic Grading System
+
+## Introduction
+Welcome to the **Automatic Grading System**! This guide provides step-by-step instructions on how to use the system to evaluate student assessments efficiently.
+
+## Steps to Use the System
+### 1. Navigate to the Grading System Page
+- Click on the **Grading System** option in the sidebar to start grading.
+"""
+
 # About Page content
 about = """
 Courtesy of [Datafied Academy (2025)](https://github.com/Datafyde), this project is a deliverable of the
@@ -244,19 +256,6 @@ def grading_system_page():
 
 
 def user_guide_page():
-
-    # User Guide content as a Markdown string
-    user_guide = """
-    # User Guide - Automatic Grading System
-
-    ## Introduction
-    Welcome to the **Automatic Grading System**! This guide provides step-by-step instructions on how to use the system to evaluate student assessments efficiently.
-
-    ## Steps to Use the System
-    ### 1. Navigate to the Grading System Page
-    - Click on the **Grading System** option in the sidebar to start grading.
-    """
-
     # Display text content
     st.markdown(user_guide, unsafe_allow_html=True)
 
