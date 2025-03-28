@@ -1,0 +1,61 @@
+StudentID,QuestionID,Student_Answer,Type
+ST001,1,D,MCQ
+ST001,2,D,MCQ
+ST002,3,A,MCQ
+ST002,4,C,MCQ
+ST003,5,"Data Science is a multidisciplinary field that applies mathematical techniques, computational tools, and analytical strategies to derive meaningful insights from both structured and unstructured data. Its significance lies in its ability to empower businesses with data-driven strategies, enhance forecasting accuracy, and address challenges in sectors such as healthcare, banking, and technology.",ESSAY
+ST003,6,"The essential phases of a data science project include hypothesis testing, data compression, feature elimination, model improvisation, overfitting optimization, and algorithm randomization. These steps ensure that models are developed quickly and can predict results with minimal data processing.",ESSAY
+ST001,7,"Supervised learning involves training models with labeled data to make predictions or classifications, whereas unsupervised learning uncovers hidden structures in data without predefined labels. For instance, regression techniques fall under supervised learning, while clustering methods belong to the unsupervised category.",ESSAY
+ST001,8,"A dataset is a set of numeric calculations often stored in a hierarchical tree structure. It mainly consists of vectors, statistical distributions, and recursive functions that define relationships between entities. Unlike tables, datasets do not necessarily contain rows and columns.",ESSAY
+ST002,9,"Data cleaning is essential because raw data frequently has missing values, inconsistencies, and inaccuracies that could lead to flawed interpretations or faulty model outputs. Cleaning the data ensures it is reliable, structured, and suitable for further processing.",ESSAY
+ST002,10,"Visualization is primarily used to train machine learning models by transforming raw data into numerical vectors. This process allows algorithms to recognize data points more efficiently, making visualization a direct component of model training rather than just a tool for analysis.",ESSAY
+ST003,11,C,MCQ
+ST003,12,A,MCQ
+ST003,13,B,MCQ
+ST004,14,C,MCQ
+ST004,15,A,MCQ
+ST004,16,A,MCQ
+ST005,17,D,MCQ
+ST005,18,A,MCQ
+ST005,19,A,MCQ
+ST006,20,C,MCQ
+ST006,21,B,MCQ
+ST006,22,D,MCQ
+ST007,23,B,MCQ
+ST007,24,A,MCQ
+ST007,25,A,MCQ
+ST008,26,D,MCQ
+ST008,27,D,MCQ
+ST008,28,B,MCQ
+ST009,29,C,MCQ
+ST009,30,B,MCQ
+ST009,31,Simple Quick Logic,ESSAY
+ST010,32,To delete all data permanently,ESSAY
+ST010,33,Data Mining,ESSAY
+ST010,34,K-Means Clustering,ESSAY
+ST001,35,Organized Tables,ESSAY
+ST001,36,Random Number,ESSAY
+ST002,37,To remove all data from a dataset,ESSAY
+ST002,38,Python,ESSAY
+ST003,39,"Extract, Transform, Load",ESSAY
+ST004,40,To encrypt passwords,ESSAY
+ST004,41,Kidney,ESSAY
+ST004,42,Vitamin Z,ESSAY
+ST005,43,To facilitate oxygen exchange in the blood,ESSAY
+ST005,44,Tuberculosis,ESSAY
+ST005,45,Heart,ESSAY
+ST006,46,Big Muscle Indicator,ESSAY
+ST006,47,AB Positive,ESSAY
+ST006,48,Pandemic,ESSAY
+ST007,49,To create antibodies,ESSAY
+ST007,50,Hypothermia,ESSAY
+ST007,51,To record historical events,ESSAY
+ST008,52,Democracy,ESSAY
+ST008,53,Anarchy,ESSAY
+ST008,54,To enforce laws,ESSAY
+ST009,55,United Nations (UN),ESSAY
+ST009,56,India,ESSAY
+ST009,57,Tokyo,ESSAY
+ST010,58,Amazon Forest,ESSAY
+ST010,59,Antarctica,ESSAY
+ST010,60,Nnamdi Azikiwe,ESSAY
