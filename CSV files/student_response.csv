@@ -1,4 +1,4 @@
-StudentID,QuestionID,Answer,Type
+StudentID,QuestionID,Student_Answer,Type
 ST001,1,D,MCQ
 ST001,2,D,MCQ
 ST002,3,A,MCQ

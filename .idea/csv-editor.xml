@@ -10,7 +10,35 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/CSV files/Backup/correct_answers2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/CSV files/Backup/questions (not to be submitted)2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/CSV files/Backup/student_responses.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/CSV files/Backup/student_responses2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/CSV files/assessment_key.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -32,6 +60,13 @@
           </value>
         </entry>
         <entry key="/CSV files/student_responses.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/CSV files/students_submission.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
