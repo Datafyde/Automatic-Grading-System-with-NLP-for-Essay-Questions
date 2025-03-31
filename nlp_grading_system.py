@@ -26,11 +26,11 @@ def validate_csv(file, expected_columns):
             return None, f"Missing columns: {', '.join(missing_columns)}"
 
         # Check for missing values in the dataset
-        elif df.isnull().values.any():
+        if df.isnull().values.any():
             return None, "The file contains missing values. Please check and re-upload."
 
         # Check for duplicate rows in the dataset
-        elif df.duplicated().any():
+        if df.duplicated().any():
             return None, "The file contains duplicate rows. Please check and re-upload."
 
         else:
