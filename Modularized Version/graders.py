@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
-Created on Mon Jun 16 17:32:28 2025
+Created on Wed Feb  5 17:15:57 2025
 
-@author: ADURA
+@authors: YOMI, ADURA, OKON, SOLOMON, ABEL, AMOS, CHRISTIANA, CORNELIUS
 """
 from sentence_transformers import SentenceTransformer, util
 
