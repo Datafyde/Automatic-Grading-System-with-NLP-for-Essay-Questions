@@ -1,0 +1,61 @@
+StudentID,QuestionID,Student_Answer,Type
+ST001,1,D,MCQ
+ST001,2,D,MCQ
+ST002,3,A,MCQ
+ST002,4,C,MCQ
+ST003,5,"Data Science is a multidisciplinary field that applies mathematical techniques, computational tools, and analytical strategies to derive meaningful insights from both structured and unstructured data. Its significance lies in its ability to empower businesses with data-driven strategies, enhance forecasting accuracy, and address challenges in sectors such as healthcare, banking, and technology.",ESSAY
+ST003,6,"The essential phases of a data science project include hypothesis testing, data compression, feature elimination, model improvisation, overfitting optimization, and algorithm randomization. These steps ensure that models are developed quickly and can predict results with minimal data processing.",ESSAY
+ST001,7,"Supervised learning involves training models with labeled data to make predictions or classifications, whereas unsupervised learning uncovers hidden structures in data without predefined labels. For instance, regression techniques fall under supervised learning, while clustering methods belong to the unsupervised category.",ESSAY
+ST001,8,"A dataset is a set of numeric calculations often stored in a hierarchical tree structure. It mainly consists of vectors, statistical distributions, and recursive functions that define relationships between entities. Unlike tables, datasets do not necessarily contain rows and columns.",ESSAY
+ST002,9,"Data cleaning is essential because raw data frequently has missing values, inconsistencies, and inaccuracies that could lead to flawed interpretations or faulty model outputs. Cleaning the data ensures it is reliable, structured, and suitable for further processing.",ESSAY
+ST002,10,"Visualization is primarily used to train machine learning models by transforming raw data into numerical vectors. This process allows algorithms to recognize data points more efficiently, making visualization a direct component of model training rather than just a tool for analysis.",ESSAY
+ST003,11,C,MCQ
+ST003,12,A,MCQ
+ST003,13,B,MCQ
+ST004,14,C,MCQ
+ST004,15,A,MCQ
+ST004,16,A,MCQ
+ST005,17,D,MCQ
+ST005,18,A,MCQ
+ST005,19,A,MCQ
+ST006,20,C,MCQ
+ST006,21,B,MCQ
+ST006,22,D,MCQ
+ST007,23,B,MCQ
+ST007,24,A,MCQ
+ST007,25,A,MCQ
+ST008,26,D,MCQ
+ST008,27,D,MCQ
+ST008,28,B,MCQ
+ST009,29,C,MCQ
+ST009,30,B,MCQ
+ST009,31,Machine learning in data analytics is primarily used to create spreadsheets for storing numerical data.,ESSAY
+ST010,32,"Data cleaning involves identifying and correcting errors, handling missing values, and ensuring data consistency to improve analysis accuracy.",ESSAY
+ST010,33,Data visualization is unnecessary because raw data in tabular form is always the most effective way to make decisions,ESSAY
+ST010,34,Big data is primarily used to store irrelevant files and does not contribute to business intelligence.,ESSAY
+ST001,35,Feature engineering is the method of physically modifying a machine to ensure it performs calculations faster.,ESSAY
+ST001,36,"Supervised learning involves training a model on labeled data, while unsupervised learning finds patterns in unlabeled data.",ESSAY
+ST002,37,The main challenge in data science is finding enough colorful charts to make reports look impressive.,ESSAY
+ST002,38,"Vaccines stimulate the immune system to produce antibodies against pathogens, preparing the body to fight infections without causing illness.",ESSAY
+ST003,39,EHRs are used only for billing purposes and do not contribute to patient care.,ESSAY
+ST004,40,Hand hygiene is unnecessary in healthcare because bacteria are beneficial for immunity.,ESSAY
+ST004,41,"Antimicrobial resistance makes infections harder to treat, leading to longer illnesses, increased mortality, and a higher burden on healthcare systems.",ESSAY
+ST004,42,"AI in healthcare is mainly used to replace doctors, eliminating the need for human medical professionals.",ESSAY
+ST005,43,Telemedicine is when doctors send medicine to patients through email.,ESSAY
+ST005,44,"Democracy ensures representation, accountability, and citizen participation in decision-making processes.",ESSAY
+ST005,45,Separation of powers means only one government body is responsible for making all laws and policies.,ESSAY
+ST006,46,"Political parties shape governance by proposing policies, mobilizing voters, and forming governments based on their ideologies.",ESSAY
+ST006,47,A multiparty system leads to chaos because too many political parties cause confusion and prevent governance.,ESSAY
+ST006,48,Voter participation is unimportant since leaders are chosen regardless of people's opinions.,ESSAY
+ST007,49,"Climate change is caused by greenhouse gas emissions, deforestation, industrial pollution, and natural climate variability.",ESSAY
+ST007,50,Mountains have no impact on climate and exist only to provide scenic views.,ESSAY
+ST007,51,"The equator is a physical barrier that separates the two halves of the world, preventing them from mixing",ESSAY
+ST008,52,Plate tectonics is the belief that the Earth is flat and held together by underground magnets.,ESSAY
+ST008,53,Oceans exist primarily to store excess rainwater to prevent flooding on land.,ESSAY
+ST008,54,Deep learning is a subset of machine learning that uses neural networks to model complex patterns in data.,ESSAY
+ST009,55,The liver is responsible for pumping blood throughout the body.,ESSAY
+ST009,56,A constitution is a book that contains historical stories of past leaders.,ESSAY
+ST009,57,"Deserts form due to low precipitation, high temperatures, and geographical barriers that block moisture.",ESSAY
+ST010,58,Globalization causes all countries to merge into one and lose their independence.,ESSAY
+ST010,59,"Heart disease is primarily caused by high cholesterol, high blood pressure, smoking, and an unhealthy diet.",ESSAY
+ST010,60,Cloud computing is a way to store physical documents in a weather-resistant cloud.,ESSAY

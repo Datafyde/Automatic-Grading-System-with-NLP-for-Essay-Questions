@@ -1,0 +1,63 @@
+questions,,
+assessment_key,,
+QuestionID,Question,Type
+Q1,A,MCQ
+Q2,D,MCQ
+Q3,B,MCQ
+Q4,C,MCQ
+Q5,"What is Data Science, and why is it important?",ESSAY
+Q6,What are the key steps in the Data Science process?,ESSAY
+Q7,What is the difference between supervised and unsupervised learning?,ESSAY
+Q8,"What is a dataset, and what are its common components?",ESSAY
+Q9,Why is data cleaning important in Data Science?,ESSAY
+Q10,What is the role of visualization in Data Science?,ESSAY
+Q11,C,MCQ
+Q12,A,MCQ
+Q13,D,MCQ
+Q14,B,MCQ
+Q15,A,MCQ
+Q16,D,MCQ
+Q17,B,MCQ
+Q18,B,MCQ
+Q19,A,MCQ
+Q20,C,MCQ
+Q21,C,MCQ
+Q22,D,MCQ
+Q23,A,MCQ
+Q24,B,MCQ
+Q25,A,MCQ
+Q26,A,MCQ
+Q27,D,MCQ
+Q28,D,MCQ
+Q29,A,MCQ
+Q30,B,MCQ
+Q31,What is the role of machine learning in data analytics?,ESSAY
+Q32,Explain the concept of data cleaning in data science.,ESSAY
+Q33,What is the importance of data visualization in decision-making?,ESSAY
+Q34,How does big data impact business intelligence?,ESSAY
+Q35,Define feature engineering in machine learning.,ESSAY
+Q36,What is the difference between supervised and unsupervised learning?,ESSAY
+Q37,What are the key challenges in data science?,ESSAY
+Q38,How do vaccines work to prevent diseases?,ESSAY
+Q39,Explain the significance of electronic health records (EHRs).,ESSAY
+Q40,Why is hand hygiene critical in healthcare settings?,ESSAY
+Q41,What are the effects of antimicrobial resistance on global health?,ESSAY
+Q42,How does artificial intelligence contribute to modern healthcare?,ESSAY
+Q43,What is the role of telemedicine in healthcare?,ESSAY
+Q44,What is the role of democracy in governance?,ESSAY
+Q45,Explain the concept of separation of powers.,ESSAY
+Q46,How do political parties influence governance?,ESSAY
+Q47,What are the benefits of a multiparty system?,ESSAY
+Q48,Why is voter participation essential in elections?,ESSAY
+Q49,What are the causes of climate change?,ESSAY
+Q50,How do mountains affect climate?,ESSAY
+Q51,What is the significance of the equator?,ESSAY
+Q52,Explain the concept of plate tectonics.,ESSAY
+Q53,Why are oceans important to the Earth's ecosystem?,ESSAY
+Q54,What is deep learning?,ESSAY
+Q55,What are the primary functions of the human liver?,ESSAY
+Q56,What is the function of a constitution in a country?,ESSAY
+Q57,What causes the formation of deserts?,ESSAY
+Q58,What are the effects of globalization on national economies?,ESSAY
+Q59,What are the major causes of heart disease?,ESSAY
+Q60,What is the importance of cloud computing in data science?,ESSAY
