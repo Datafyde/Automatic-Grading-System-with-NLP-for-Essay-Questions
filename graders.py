@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This part of the code is responsible for grading both Essay Questions and Multiple-Choice Questions
+This file contains functions that are used to grade the multi-choice questions and essay questions
 Created on Wed Feb  5 17:15:57 2025
 
 @authors: YOMI, ADURA, OKON, SOLOMON, ABEL, AMOS, CHRISTIANA, CORNELIUS
