@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+This part of the code is responsible for showing you the User Guide
 Created on Wed Feb  5 17:15:57 2025
 
 @authors: YOMI, ADURA, OKON, SOLOMON, ABEL, AMOS, CHRISTIANA, CORNELIUS

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+This part of the code is responsible for Validating Submitted CSV files
 Created on Wed Feb  5 17:15:57 2025
 
 @authors: YOMI, ADURA, OKON, SOLOMON, ABEL, AMOS, CHRISTIANA, CORNELIUS
