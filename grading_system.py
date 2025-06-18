@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-This part of the code is responsible for grading Multiple Choice Questions
+This part of the code is responsible for displaying the grading system page.
+Functions from the validator.py file and the graders.py files are used to validate the data, grade the multi-choice questions and essay questions.
 Created on Wed Feb  5 17:15:57 2025
 
 @authors: YOMI, ADURA, OKON, SOLOMON, ABEL, AMOS, CHRISTIANA, CORNELIUS
