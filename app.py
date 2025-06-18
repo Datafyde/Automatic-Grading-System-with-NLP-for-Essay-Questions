@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-This part of the code is responsible for showing the Side Bar
+This part of the code contians all the functions for each page in the app.
+It is also responsible for controlling what page is active and it displays the navigation bars.
 Created on Wed Feb  5 17:15:57 2025
 
 @authors: YOMI, ADURA, OKON, SOLOMON, ABEL, AMOS, CHRISTIANA, CORNELIUS
