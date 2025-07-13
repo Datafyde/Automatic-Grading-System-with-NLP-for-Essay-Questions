@@ -4,4 +4,3 @@ spacy
 streamlit
 joblib
 sentence_transformers
-time
