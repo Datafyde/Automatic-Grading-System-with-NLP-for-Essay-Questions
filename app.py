@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-This part of the code contians all the functions for each page in the app.
+This part of the code contains all the functions for each page in the app.
 It is also responsible for controlling what page is active and it displays the navigation bars.
 Created on Wed Feb  5 17:15:57 2025
 
