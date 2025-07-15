@@ -1,4 +1,8 @@
 import streamlit as st
+from home import home_page
+from grading_system import grading_system_page
+from user_guide import user_guide_page
+from about import about_page
 
 # Set page config
 st.set_page_config(layout="wide")
@@ -58,7 +62,8 @@ def home_page():
   # Two column layout
   col1, col2 = st.columns([1, 2])
   with col1:
-
+    # Adding space from the top margin
+    st.write("")
     st.write("")
     st.write("")
     st.write("")
