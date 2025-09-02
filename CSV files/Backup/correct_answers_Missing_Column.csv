@@ -1,0 +1,61 @@
+QuestionID,Type
+1,A,MCQ
+2,D,MCQ
+3,B,MCQ
+4,C,MCQ
+5,"Data Science is an interdisciplinary field that uses scientific methods, algorithms, and systems to extract knowledge and insights from structured and unstructured data. It is important because it helps organizations make data-driven decisions, predict trends, and solve complex problems across industries like healthcare, finance, and technology.",ESSAY
+6,"The key steps include data collection, data cleaning, exploratory data analysis (EDA), model building, model evaluation, and deployment. These steps ensure that data is properly prepared, analyzed, and used to create actionable insights or predictive models.",ESSAY
+7,"Supervised learning uses labeled data to train models to predict outcomes or classify data, while unsupervised learning finds patterns or groupings in unlabeled data without predefined outcomes. Examples include regression (supervised) and clustering (unsupervised).",ESSAY
+8,"A dataset is a collection of data, often organized in a tabular format with rows and columns. Common components include features (independent variables), labels (dependent variables), and observations (rows representing individual data points).",ESSAY
+9,"Data cleaning is crucial because raw data often contains errors, missing values, or inconsistencies that can skew analysis and model performance. Cleaning ensures data is accurate, complete, and ready for analysis.",ESSAY
+10,"Visualization helps in understanding data patterns, trends, and relationships through graphs, charts, and plots. It simplifies complex data and communicates insights effectively to stakeholders, making it a critical step in exploratory data analysis (EDA).",ESSAY
+11,C,MCQ
+12,A,MCQ
+13,D,MCQ
+14,B,MCQ
+15,A,MCQ
+16,D,MCQ
+17,B,MCQ
+18,B,MCQ
+19,A,MCQ
+20,C,MCQ
+21,C,MCQ
+22,D,MCQ
+23,A,MCQ
+24,B,MCQ
+25,A,MCQ
+26,A,MCQ
+27,D,MCQ
+28,D,MCQ
+29,A,MCQ
+30,B,MCQ
+31,"Machine learning enhances data analytics by identifying patterns, making predictions, and automating decision-making based on large datasets.",ESSAY
+32,"Data cleaning involves identifying and correcting errors, handling missing values, and ensuring data consistency to improve analysis accuracy.",ESSAY
+33,"Data visualization helps in presenting complex data in graphical form, making it easier to identify trends, outliers, and patterns for better decision-making.",ESSAY
+34,"Big data enables businesses to analyze large volumes of information, uncover insights, and make data-driven strategic decisions.",ESSAY
+35,"Feature engineering is the process of selecting, modifying, or creating new input variables to improve a machine learning model’s performance.",ESSAY
+36,"Supervised learning involves training a model on labeled data, while unsupervised learning finds patterns in unlabeled data.",ESSAY
+37,"Challenges include data quality issues, data privacy concerns, computational complexity, and model interpretability.",ESSAY
+38,"Vaccines stimulate the immune system to produce antibodies against pathogens, preparing the body to fight infections without causing illness.",ESSAY
+39,"EHRs improve healthcare efficiency by providing a centralized, digital record of a patient’s medical history, ensuring better diagnosis and treatment.",ESSAY
+40,Hand hygiene prevents the spread of infections by eliminating pathogens that can be transmitted between patients and healthcare providers.,ESSAY
+41,"Antimicrobial resistance makes infections harder to treat, leading to longer illnesses, increased mortality, and a higher burden on healthcare systems.",ESSAY
+42,"AI improves diagnostics, enhances patient care, and optimizes hospital operations through predictive analytics and automated processes.",ESSAY
+43,"Telemedicine allows remote consultations, improves access to healthcare, and reduces the burden on hospitals.",ESSAY
+44,"Democracy ensures representation, accountability, and citizen participation in decision-making processes.",ESSAY
+45,"Separation of powers divides government responsibilities among the legislative, executive, and judicial branches to prevent abuse of power.",ESSAY
+46,"Political parties shape governance by proposing policies, mobilizing voters, and forming governments based on their ideologies.",ESSAY
+47,"A multiparty system promotes political diversity, encourages debate, and allows for better representation of different societal groups.",ESSAY
+48,"Voter participation ensures that government leaders reflect the will of the people, strengthening democratic governance.",ESSAY
+49,"Climate change is caused by greenhouse gas emissions, deforestation, industrial pollution, and natural climate variability.",ESSAY
+50,"Mountains influence climate by blocking air movement, causing orographic rainfall, and affecting temperature due to altitude differences.",ESSAY
+51,The equator is an imaginary line dividing the Earth into the Northern and Southern Hemispheres and is associated with warm temperatures and direct sunlight.,ESSAY
+52,"Plate tectonics is the theory that Earth's lithosphere is divided into plates that move, causing earthquakes, volcanic activity, and continental drift.",ESSAY
+53,"Oceans regulate climate, provide habitat for marine life, generate oxygen, and support global economies through fishing and trade.",ESSAY
+54,Deep learning is a subset of machine learning that uses neural networks to model complex patterns in data.,ESSAY
+55,"The liver detoxifies blood, produces bile for digestion, and stores essential nutrients.",ESSAY
+56,A constitution outlines the fundamental laws and principles that govern a country.,ESSAY
+57,"Deserts form due to low precipitation, high temperatures, and geographical barriers that block moisture.",ESSAY
+58,"Globalization fosters economic growth, increases trade, and enhances cultural exchange between countries.",ESSAY
+59,"Heart disease is primarily caused by high cholesterol, high blood pressure, smoking, and an unhealthy diet.",ESSAY
+60,"Cloud computing provides scalable storage, computing power, and collaborative tools for data scientists.",ESSAY
