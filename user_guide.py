@@ -27,7 +27,7 @@ def user_guide_page():
 
     # Display screenshot of step
     st.image(
-      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/blob/main/User%20Guide/1.%20Click%20on%20Grading%20System.png",
+      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/1.%20Click%20on%20Grading%20System.png",
       caption="Click on the Grading System Button",
       width=700
     )
@@ -46,7 +46,7 @@ def user_guide_page():
 
     # Display screenshot of step
     st.image(
-      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/blob/main/User%20Guide/2.%20Upload%20Correct%20Answer%20CSV%20File.png",
+      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/2.%20Upload%20Correct%20Answer%20CSV%20File.png",
       caption="Upload Correct Answers .CSV File",
       width=700
     )
@@ -64,7 +64,7 @@ def user_guide_page():
 
     # Display screenshot of step
     st.image(
-      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/blob/main/User%20Guide/2.1.%20Upload%20Student%20Submission%20CSV%20File.png",
+      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/2.1.%20Upload%20Student%20Submission%20CSV%20File.png",
       caption="Upload Student Submission.CSV File",
       width=700
     )
@@ -78,12 +78,12 @@ def user_guide_page():
 
     # Display screenshot of step
     st.image(
-      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/blob/main/User%20Guide/3.%20Invalid%20Files%20Uploaded.png",
+      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/3.%20Invalid%20Files%20Uploaded.png",
       caption="Files With Missing Columns",
       width=700
     )
     st.image(
-      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/blob/main/User%20Guide/3.1%20Valid%20Files%20Uploaded.png",
+      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/3.1%20Valid%20Files%20Uploaded.png",
       caption="Files With Accurate Columns",
       width=700
     )
@@ -99,7 +99,7 @@ def user_guide_page():
 
     # Display screenshot of step
     st.image(
-      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/blob/main/User%20Guide/4.%20Show%20Results.png",
+      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/4.%20Show%20Results.png",
       caption="Click on the 'Show Results' button",
       width=700
     )
@@ -117,13 +117,13 @@ def user_guide_page():
 
     # Display screenshot of step
     st.image(
-      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/blob/main/User%20Guide/5.%20MCQ%20%26%20Essay%20Scores.png",
+      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/5.%20MCQ%20%26%20Essay%20Scores.png",
       caption="MCQ and Essay Scores",
       width=700
     )
 
     st.image(
-      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/blob/main/User%20Guide/5.1.%20Visualization%20%26%20Result%20Download.png",
+      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/5.1.%20Visualization%20%26%20Result%20Download.png",
       caption="Bar Chart Visualization & Download Results",
       width=700
     )
@@ -136,7 +136,7 @@ def user_guide_page():
 
     # Display screenshot of step
     st.image(
-      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/blob/main/User%20Guide/6.%20Refresh%20Button.png",
+      "https://raw.githubusercontent.com/SolomonAyuba/Automatic-Grading-System-with-NLP-for-Essay-Questions/main/User%20Guide/6.%20Refresh%20Button.png",
       caption="Click on the 'Refresh' Button",
       width=700
     )
