@@ -13,6 +13,12 @@ from grading_system import grading_system_page
 from user_guide import user_guide_page
 from about import about_page
 
+st.set_page_config(
+  page_title="Automatic Essay & MCQ Grading System",
+  page_icon="🎓",
+  layout="centered"
+)
+
 # Ensure home page is the default landing page
 if "page" not in st.session_state:
     st.session_state.page = "Home"
