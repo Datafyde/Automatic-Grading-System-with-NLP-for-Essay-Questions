@@ -1,4 +1,5 @@
 # Automatic-Grading-System-with-NLP-for-Essay-Questions
+### **View the Streamlit Deployed App:** https://automaticgradingsystem.streamlit.app/
 
 ## 1. Problem Statement
 In educational settings, grading student submissions is often time-consuming and prone to subjective biases, especially for essay-type questions. Manually evaluating hundreds of answers consumes valuable resources and limits the ability to provide immediate feedback to students. A system that automates this process will streamline grading and ensure consistency.
