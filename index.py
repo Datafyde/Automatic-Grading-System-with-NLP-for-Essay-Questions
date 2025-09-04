@@ -5,7 +5,11 @@ from user_guide import user_guide_page
 from about import about_page
 
 # Set page config
-st.set_page_config(layout="wide")
+st.set_page_config(
+  page_title="Automatic Essay & MCQ Grading System",
+  page_icon="🎓",
+  layout="wide"
+)
 
 # Initialize navigation state
 if 'page' not in st.session_state:
